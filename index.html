@@ -7,22 +7,40 @@
     </head>
     <body>
         <header>
-            <div class="container">
-                <a href="http://127.0.0.1:5500/index.html"><img src="main-page-photos/main-menu-icon.webp" alt="menu" class="menu"></a>
-                <nav>
-                    <ul>
-                        <li>About</li>
-                        <li>Anime</li>
-                        <li>Manga</li>
-                        <li>Rejestracja</li>
-                    </ul>
-                </nav>
-                <div class="main-cover">
-                    <img src="" alt="main-cover" class="main-cover-photo">
+            <div class="top-bar">
+                <div class="top-bar--menu">
+                    <a href="http://127.0.0.1:5500/index.html"><img src="main-page-photos/main-menu-icon.webp" alt="menu" class="menu"></a>
+                    <nav>
+                        <ul>
+                            <li>About</li>
+                            <li>Anime</li>
+                            <li>Manga</li>
+                            <li>Rejestracja</li>
+                        </ul>
+                    </nav>
                 </div>
+                <div class="top-bar--user">
+                    <form class="main-search" id="menu-search">
+                        <fieldset>
+                            <input type="text" placeholder="anime, manga, nowela">
+                            <button type="submit" class="search-button">
+                                <i class="search"></i>
+                            </button>
+                        </fieldset>
+                    </form>
+                    <a href="" class="login-button">Logowanie</a>
+                </div> 
             </div>
         </header>
         <main>
+            <form class="age-verification">
+                <fieldset>
+                    <legend>Masz ukończone 18 lat?</legend>
+                    <input type="radio" name="kategoria_wiekowa" id="kategoria_wiekowa1"><label for="kategoria_wiekowa1">Tak</label>
+                    <input type="radio" name="kategoria_wiekowa" id="kategoria_wiekowa2"><label for="kategoria_wiekowa2">Nie</label>
+                    <input type="submit" value="Potwierdź">
+                </fieldset>
+            </form>
             <section class="box box-new-series">
                 <h2 class="box-title-new-series">
                     <span>Nowe Premiery</span>
