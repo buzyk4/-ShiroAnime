@@ -10,20 +10,17 @@ body{
     color: #76008A;
 }
 
-.container{
-    width: 80%;
-}
-header{
+
+.top-bar{
     background-color: black;
-}
-header::after{
-    content: '';
-    display: table;
-    clear: both;
+    display:flex;
+    justify-content: space-between;
+    margin: auto;
+    
 }
 .menu{
-    height: 20px;
-    width: 20px;
+    height: 31px;
+    width: 31px;
     background-color:#76008A;
     padding: 5px;
     float: left;
@@ -41,7 +38,35 @@ nav li{
     margin-left: 100px;
     padding-top: 5px;
 }
+.top-bar--user{
+    display: flex;
+}
+.search-button:before{
+    content: "\f002";
+}
+.top-bar--user .login-button {
+    position: relative;
+    background: #868986;
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0 10px;
+    display: inline-block;
+    margin: 3px 10px 0;
+    
+}
+header::after{
+    content: '';
+    display: table;
+    clear: both;
+}
 
+
+.age-veryfication{
+    text-align: center;
+}
 section{
     background-color: #222;
 }
