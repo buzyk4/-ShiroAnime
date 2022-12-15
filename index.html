@@ -8,39 +8,29 @@
     <body>
         <header>
             <div class="top-bar">
-                <div class="top-bar--menu">
-                    <a href="http://127.0.0.1:5500/index.html"><img src="main-page-photos/main-menu-icon.webp" alt="menu" class="menu"></a>
-                    <nav>
-                        <ul>
-                            <li>About</li>
-                            <li>Anime</li>
-                            <li>Manga</li>
-                            <li>Rejestracja</li>
-                        </ul>
-                    </nav>
+                <div class="top-bar-menu">
+                    <a href="" class="main-menu-button"><img id="menu-icon" src="main-page-photos/home-icon.svg"></a>
+                    <a href="" class="menu-button">Anime</a>
+                    <a href="" class="menu-button">Manga</a>
+                    <a href="" class="menu-button">Forum</a>
+                    <a href="" class="menu-button">Register</a>
                 </div>
-                <div class="top-bar--user">
-                    <form class="main-search" id="menu-search">
-                        <fieldset>
-                            <input type="text" placeholder="anime, manga, nowela">
-                            <button type="submit" class="search-button">
-                                <i class="search"></i>
-                            </button>
-                        </fieldset>
-                    </form>
-                    <a href="" class="login-button">Logowanie</a>
+                <div class="top-bar-user">
+                    <input class="search">
+                    <a href="" class="menu-button">Sing in</a>
+                    <a href="" class="menu-button">About</a>
                 </div> 
+            </div>
+            <div class="logo">
+                <div class="border-gradient">
+                    <div class="main-title">
+                        <strong>Shiro</strong>
+                    </div>
+                </div>
+                <img src="main-page-photos/logo-img.png" id="logo-img">
             </div>
         </header>
         <main>
-            <form class="age-verification">
-                <fieldset>
-                    <legend>Masz ukończone 18 lat?</legend>
-                    <input type="radio" name="kategoria_wiekowa" id="kategoria_wiekowa1"><label for="kategoria_wiekowa1">Tak</label>
-                    <input type="radio" name="kategoria_wiekowa" id="kategoria_wiekowa2"><label for="kategoria_wiekowa2">Nie</label>
-                    <input type="submit" value="Potwierdź">
-                </fieldset>
-            </form>
             <section class="box box-new-series">
                 <h2 class="box-title-new-series">
                     <span>Nowe Premiery</span>
