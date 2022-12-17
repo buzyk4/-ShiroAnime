@@ -9,10 +9,13 @@ body
     margin-right: 10%;
     background-color: #222;
     color: #76008A;
+    font-family: 'Inter', Sans-serif;
+    font-family: 'Lato', Sans-serif;
+    font-family: 'Noto Sans', Sans-serif;
 }
 .top-bar
 {
-    background-color: #431299;
+    background: linear-gradient(35deg, #b3127dd7,#5e0b85,rgb(90, 4, 160),#0d1b99); ;
     color: black;
     display:flex;
     justify-content: space-between
@@ -28,18 +31,18 @@ body
     font-family: 'Inter', Sans-serif;
     text-decoration: none;
     color: black;
-    border: 1px solid #A21435;
+    border: 2px solid #340913;
     border-radius: 10px;
     text-decoration: none;
     margin: 5px;
-    padding: 10px;
+    padding: 8px;
     font-weight: bold;
     display: inline-block;
     background-color: #9F76E7;
 }
-a:hover
+.menu-button:hover
 {
-    background-color: #A21435;
+    background-color: #C3A9EF;
     color: black;
 }
 .main-menu-button
@@ -52,8 +55,12 @@ a:hover
     margin: 5px;
     padding: 10px;
     background-color: #9F76E7;
-    border: 1px solid #A21435;
+    border: 2px solid #340913;
     border-radius: 10px;
+}
+.main-menu-button:hover
+{
+    background-color: #C3A9EF;
 }
 #menu-icon
 {
@@ -75,11 +82,8 @@ a:hover
     padding: 10px;
     transition-duration: 500ms;
     cursor: pointer;
-    font-family: 'Inter', Sans-serif;
-    font-family: 'Lato', Sans-serif;
-    font-family: 'Noto Sans', Sans-serif;
     font-size: 15px;
-    border: 1px solid #A21435;
+    border: 2px solid #340913;
     overflow: hidden;
     background-color: #9F76E7;
     background-image: url(main-page-photos/search-white.svg);
@@ -89,11 +93,11 @@ a:hover
 }
 .search:hover
 {
-    background-color: #A21435;
+    background-color: #C3A9EF;
 }
 .search:focus
 {
-    width: 200px;
+    width: 180px;
     cursor: text;
     font-weight: bold;
     padding-left: 40px;
@@ -102,7 +106,7 @@ a:hover
     background-color: transparent;
     border: 1px solid black;
     background: url(main-page-photos/search-white.svg)no-repeat;
-    background-color: #A21435;
+    background-color: #C3A9EF;
     background-size: 22px;
     background-position: 15px 50%;
 
@@ -142,81 +146,135 @@ strong
 {
     margin-right: 330px;
 }
-.age-verification
+.box-container
 {
-    text-align: center;
+    padding: 0px 5px 5px
 }
-section
-{
-    background-color: #222;
-}
-.box-new-series
-{
-    box-sizing: border-box;
-}
+
 .box
 {
-    position: relative;
-    overflow: hidden;
-    padding: 0 5px 5px;
-    border-radius: 5px;
-    background-clip: padding-box;
-}
-.box-title-new-series{
-    text-align: center;
-    text-transform: uppercase;
-    font-family: comfortaa,cursive;
+    color: #eceaec;
+    border-bottom: 2px solid #525252;
+    padding: 0;
+    line-height: 15px;
     letter-spacing: 1px;
-    margin: 3px 0; 
+    font-weight: 100;
+    margin-bottom: 15px;
 }
-.new-series-row::before{
-    content: "";
-    display: table;
-    clear: both;   
+.best-rate-row
+{
+    height: 192px;
+    width:max-content;
 }
-.upcoming-premiere-photo{
-    float: left;
+#best-rate-photo
+{
+    display: flex;
 }
-.new-series-row::after{
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.box-best-rate{
-    box-sizing: border-box;
-}
-.box{
-    position: relative;
-    overflow: hidden;
-    padding: 0 5px 5px;
-    border-radius: 5px;
-    background-clip: padding-box;
-}
-.box-title-best-rate{
-    text-align: center;
-    text-transform: uppercase;
-    font-family: comfortaa,cursive;
-    letter-spacing: 1px;
-    margin: 3px 0; 
-}
-.best-rate-row::before{
-    content: "";
-    display: table;
-    clear: both;   
-}
-
-.best-rate-row::after{
-    content: "";
-    display: table;
-    clear: both;
-}
-
-
-
-main footer {
+.season-tile
+{
     display: block;
-    flex-direction: column;
+    height: 192px;
+    width: 135px;
+    background-repeat: no-repeat;
+    background-size: 135px 192px;
+    margin: 0 3px;
+    position: relative;  
+}
+#tile-cover-a
+{
+    background-image: url(main-page-photos/berserk.jpg);
+}
+#tile-cover-b
+{
+    background-image: url(main-page-photos/full-metal-alchemist.jpg);
+}
+#tile-cover-c
+{
+    background-image: url(main-page-photos/attack-on-titan.jpg);
+}
+#tile-cover-d
+{
+    background-image: url(main-page-photos/demon-slayer.jpg);
+}
+.tile-title
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    visibility: hidden;
+    padding: 5px;
+    background-color: rgba(0,0,0,.76);
+    color: white;
+    text-align: center;
+    text-transform: capitalize;
+    line-height: 185px;
+    vertical-align: middle;
+    
+}
+.season-tile:hover .tile-title
+{
+    background-color: rgba(0,0,0,.76);
+    visibility:visible;
+}
+.tile-title span
+{
+    background: transparent;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 20px
+}
+.row img
+{
+    width: 135px;
+    height: 192px;
+}
+span
+{
+    background-color: #222;
+    padding-left: 15px;
+    padding-right: 5px;
+    font-family:  'Inter', Sans-serif;
+
+}
+#bottom-banner
+{
+    display: flex;
+    justify-content: space-between;
     background-color :#76008A;
-    color: white
+    
+
+}
+.bottom-container
+{
+    margin: 5px 30px 50px 30px;
+    background-color :#76008A;
+    color: #eceaec;
+    width: 400px;
+}
+h3
+{
+    border-bottom: 2px solid #222;
+    line-height: 15px;
+    margin-bottom: 15px;
+}
+h3 span
+{
+    background-color:#76008A;
+}
+#info li:before
+{
+    content: "\261B"
+}
+#achievements li:before
+{
+    content: "\1F3C6"
+}
+li
+{
+    list-style: none;
+    margin: 5px;
+    font-family: 'Inter', Sans-serif;
+    font-weight: bold;
 }
