@@ -161,14 +161,16 @@ strong
     font-weight: 100;
     margin-bottom: 15px;
 }
-.best-rate-row
+.row img
 {
+    width: 135px;
     height: 192px;
-    width:max-content;
 }
-#best-rate-photo
+.tile-container
 {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .season-tile
 {
@@ -180,21 +182,99 @@ strong
     margin: 0 3px;
     position: relative;  
 }
-#tile-cover-a
+#tile-cover-bskh
+{
+    background-image: url(main-page-photos/bleach-new-season.jpg);
+}
+#tile-cover-sl
+{
+    background-image: url(main-page-photos/solo-leveling-new-season.jpg);
+}
+#tile-cover-tmodka
+{
+    background-image: url(main-page-photos/the-misfit-of-demon-king-academy-new-season.jpg);
+}
+#tile-cover-vs
+{
+    background-image: url(main-page-photos/vinland-saga-new-season.jpg);
+}
+#tile-cover-cm
+{
+    background-image: url(main-page-photos/chainsaw-man-new-season.jpg);
+}
+#tile-cover-sxf
+{
+    background-image: url(main-page-photos/spy-x-family-new-season.jpg);
+}
+#tile-cover-bnha
+{
+    background-image: url(main-page-photos/boku-no-hero-academia-new-season.jpg);
+}
+#tile-cover-bl
+{
+    background-image: url(main-page-photos/blue-lock-new-season.jpg);
+}
+#tile-cover-mpc
+{
+    background-image: url(main-page-photos/mob-psycho-c-new-season.jpg);
+}
+#tile-cover-oi
+{
+    background-image: url(main-page-photos/overlord-iv.jpg);
+}
+/*
+THERE IS TILES FOR BEST-RATE SECTION!!!
+*/
+#tile-cover-b
 {
     background-image: url(main-page-photos/berserk.jpg);
 }
-#tile-cover-b
+#tile-cover-fma
 {
     background-image: url(main-page-photos/full-metal-alchemist.jpg);
 }
-#tile-cover-c
+#tile-cover-aot
 {
     background-image: url(main-page-photos/attack-on-titan.jpg);
 }
-#tile-cover-d
+#tile-cover-ds
 {
     background-image: url(main-page-photos/demon-slayer.jpg);
+}
+#tile-cover-hxh
+{
+    background-image: url(main-page-photos/hunter-x-hunter.jpg);
+}
+#tile-cover-cghnl
+{
+    background-image: url(main-page-photos/code-geass-hangyaku-no-lelouch.jpg);
+}
+#tile-cover-ce
+{
+    background-image: url(main-page-photos/cyberpunk-edgerunners.jpg);
+}
+#tile-cover-trotsh
+{
+    background-image: url(main-page-photos/the-rising-of-the-shield-hero.jpg);
+}
+#tile-cover-ns
+{
+    background-image: url(main-page-photos/naruto-shippuuden.jpg);
+}
+#tile-cover-jk
+{
+    background-image: url(main-page-photos/jujutsu-kaisen.jpg);
+}
+/*
+THERE IS TILES FOR BEST-ISEKAI SECTION!!!
+*/
+#tile-cover-sao
+{
+    background-image: url(main-page-photos/sword-art-online-panel.jpg);
+}
+#tile-cover-mt
+{
+    background-image: url(main-page-photos/mushoku-tensei-panel.jpg);
 }
 .tile-title
 {
@@ -225,17 +305,14 @@ strong
     vertical-align: middle;
     line-height: 20px
 }
-.row img
-{
-    width: 135px;
-    height: 192px;
-}
 span
 {
     background-color: #222;
     padding-left: 15px;
     padding-right: 5px;
     font-family:  'Inter', Sans-serif;
+    padding-left: 10px;
+    padding-right: 10px;
 
 }
 #bottom-banner
