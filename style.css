@@ -13,13 +13,20 @@ body
     font-family: 'Lato', Sans-serif;
     font-family: 'Noto Sans', Sans-serif;
 }
-.top-bar
+#top-bar-container
 {
+   width: 80%;
+   height: 50px; 
+}
+#top-bar
+{
+    position: fixed;
     background: linear-gradient(35deg, #b3127dd7,#5e0b85,rgb(90, 4, 160),#0d1b99); ;
     color: black;
-    display:flex;
-    justify-content: space-between
-    
+    display: flex;
+    z-index: 1;
+    justify-content: space-between;
+    width: 80%;
 }
 .top-bar-menu
 {
@@ -303,7 +310,7 @@ THERE IS TILES FOR BEST-ISEKAI SECTION!!!
     background: transparent;
     display: inline-block;
     vertical-align: middle;
-    line-height: 20px
+    line-height: 20px;
 }
 span
 {
