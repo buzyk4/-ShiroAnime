@@ -8,7 +8,7 @@ body
     margin-left: 10%;
     margin-right: 10%;
     background-color: #222;
-    color: #76008A;
+    color: #ffffff;
     font-family: 'Inter', Sans-serif;
     font-family: 'Lato', Sans-serif;
     font-family: 'Noto Sans', Sans-serif;
@@ -168,16 +168,49 @@ strong
     font-weight: 100;
     margin-bottom: 15px;
 }
+.text-text
+{
+    display: block;
+    justify-content: flex-start;
+    border: 2px solid #000000;
+    width: 40%;
+    height: 4;
+}
+.scroll-container
+{
+    display:flex;
+    justify-content: flex-end;
+    margin-right: 15%;
+}
 .row img
 {
     width: 135px;
     height: 192px;
 }
+.row
+{
+    display: flex;
+    overflow-x: scroll;
+    width: 46%;
+    scroll-snap-type: x mandatory;
+}
+.row::-webkit-scrollbar {
+	width: 6px;
+	background-color: #525252;
+}
+.row::-webkit-scrollbar-thumb {
+	background-color: #eceaec;
+    border-radius: 20px;
+    border: 2px solid #000000;
+}
 .tile-container
 {
     display: flex;
+    scroll-snap-align: start;
     justify-content: center;
     align-items: center;
+    background-color:#363636;
+    height: 225px;
 }
 .season-tile
 {
@@ -186,7 +219,7 @@ strong
     width: 135px;
     background-repeat: no-repeat;
     background-size: 135px 192px;
-    margin: 0 3px;
+    margin: 0 5px;
     position: relative;  
 }
 #tile-cover-bskh
