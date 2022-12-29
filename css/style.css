@@ -24,7 +24,7 @@ body
     background: linear-gradient(35deg, #b3127dd7,#5e0b85,rgb(90, 4, 160),#0d1b99); ;
     color: black;
     display: flex;
-    z-index: 1;
+    z-index: 5;
     justify-content: space-between;
     width: 80%;
 }
@@ -157,7 +157,6 @@ strong
 {
     padding: 0px 5px 5px
 }
-
 .box
 {
     color: #eceaec;
@@ -168,50 +167,6 @@ strong
     font-weight: 100;
     margin-bottom: 15px;
 }
-.text-text
-{
-    display: block;
-    justify-content: flex-start;
-    border: 2px solid #000000;
-    width: 40%;
-    height: 4;
-}
-.scroll-container
-{
-    display:flex;
-    justify-content: flex-end;
-    margin-right: 15%;
-}
-.row img
-{
-    width: 135px;
-    height: 192px;
-}
-.row
-{
-    display: flex;
-    overflow-x: scroll;
-    width: 46%;
-    scroll-snap-type: x mandatory;
-}
-.row::-webkit-scrollbar {
-	width: 6px;
-	background-color: #525252;
-}
-.row::-webkit-scrollbar-thumb {
-	background-color: #eceaec;
-    border-radius: 20px;
-    border: 2px solid #000000;
-}
-.tile-container
-{
-    display: flex;
-    scroll-snap-align: start;
-    justify-content: center;
-    align-items: center;
-    background-color:#363636;
-    height: 225px;
-}
 .season-tile
 {
     display: block;
@@ -219,8 +174,93 @@ strong
     width: 135px;
     background-repeat: no-repeat;
     background-size: 135px 192px;
-    margin: 0 5px;
+    margin: 0px;
     position: relative;  
+}
+
+
+
+
+
+/* First panel */
+#first-panel
+{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 10px 5px 10px;
+}
+#text
+{
+    height: 192px;
+    width: 200px;
+}
+.slider 
+{
+    position: relative;
+    width: 725px;
+    height: 12em;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(104, 11, 133, 0.3);
+}
+.slider #slide-wrap 
+{
+    position: relative;
+    list-style: none;
+    height: 200px;
+    width: 90.8em;
+    padding: 0;
+    margin: 0;
+    transition: all 750ms ease;
+    left: 0;
+}
+.slider #prev, .slider #next 
+{
+    width: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    font-size: 2rem;
+    visibility: hidden;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 150ms ease;
+}
+.slider #prev:hover, .slider #next:hover 
+{
+    background-color: rgba(111, 17, 165, 0.5);
+    text-shadow: 0;
+}
+.slider:hover #prev, .slider:hover #next
+{
+    visibility: visible;
+    background-color: rgba(30, 29, 31, 0.788);
+} 
+.slider ul li 
+{
+    position: relative;
+    height: 100%; 
+    width: 145px;
+    float: left;
+}
+.slider ul li a
+{
+    margin: 5px;
+    height: 192px;
+    width: 135px;
+}
+.slider #prev 
+{
+    font-size: 20px;
+    left: 10px;
+}
+.slider #next 
+{
+    font-size: 20px;
+    right: 10px;
 }
 #tile-cover-bskh
 {
@@ -262,9 +302,81 @@ strong
 {
     background-image: url(/main-page-photos/overlord-iv.jpg);
 }
-/*
-THERE IS TILES FOR BEST-RATE SECTION!!!
-*/
+/* Second panel */
+#second-panel
+{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 10px 5px 10px;
+}
+.second-slider 
+{
+    position: relative;
+    width: 725px;
+    height: 12em;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(104, 11, 133, 0.3);
+}
+.second-slider ul 
+{
+    position: relative;
+    list-style: none;
+    height: 200px;
+    width: 90.8em;
+    padding: 0;
+    margin: 0;
+    transition: all 750ms ease;
+    left: 0;
+}
+.second-slider #second-prev, .second-slider #second-next 
+{
+    width: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    font-size: 2rem;
+    visibility: hidden;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 150ms ease;
+}
+.second-slider #second-prev:hover, .second-slider #second-next:hover 
+{
+    background-color: rgba(111, 17, 165, 0.5);
+    text-shadow: 0;
+}
+.second-slider:hover #second-prev, .second-slider:hover #second-next
+{
+    visibility: visible;
+    background-color: rgba(30, 29, 31, 0.788);
+} 
+#second-slider ul li 
+{
+    position: relative;
+    height: 100%; 
+    width: 145px;
+    float: left;
+}
+#second-slider ul li a
+{
+    margin: 5px;
+    height: 192px;
+    width: 135px;
+}
+.second-slider #second-prev 
+{
+    font-size: 20px;
+    left: 10px;
+}
+.second-slider #second-next 
+{
+    font-size: 20px;
+    right: 10px;
+}
 #tile-cover-b
 {
     background-image: url(/main-page-photos/berserk.jpg);
@@ -355,6 +467,16 @@ span
     padding-right: 10px;
 
 }
+
+
+
+
+
+
+
+
+
+
 #bottom-banner
 {
     display: flex;
@@ -391,7 +513,6 @@ h3 span
 li
 {
     list-style: none;
-    margin: 5px;
     font-family: 'Inter', Sans-serif;
     font-weight: bold;
 }
