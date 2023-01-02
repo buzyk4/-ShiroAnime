@@ -189,10 +189,10 @@ strong
     justify-content: space-between;
     margin: 5px 10px 5px 10px;
 }
-#text
+#anime-info img
 {
     height: 192px;
-    width: 200px;
+    width: 135px;
 }
 .slider 
 {
@@ -420,6 +420,80 @@ strong
 /*
 THERE IS TILES FOR BEST-ISEKAI SECTION!!!
 */
+#third-panel
+{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 10px 5px 10px;
+}
+.third-slider 
+{
+    position: relative;
+    width: 725px;
+    height: 12em;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(104, 11, 133, 0.3);
+}
+.third-slider ul 
+{
+    position: relative;
+    list-style: none;
+    height: 200px;
+    width: 90.8em;
+    padding: 0;
+    margin: 0;
+    transition: all 750ms ease;
+    left: 0;
+}
+.third-slider #third-prev, .third-slider #third-next 
+{
+    width: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    font-size: 2rem;
+    visibility: hidden;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 150ms ease;
+}
+.third-slider #third-prev:hover, .third-slider #third-next:hover 
+{
+    background-color: rgba(111, 17, 165, 0.5);
+    text-shadow: 0;
+}
+.third-slider:hover #third-prev, .third-slider:hover #third-next
+{
+    visibility: visible;
+    background-color: rgba(30, 29, 31, 0.788);
+} 
+#third-slider ul li 
+{
+    position: relative;
+    height: 100%; 
+    width: 145px;
+    float: left;
+}
+#third-slider ul li a
+{
+    margin: 5px;
+    height: 192px;
+    width: 135px;
+}
+.third-slider #third-prev 
+{
+    font-size: 20px;
+    left: 10px;
+}
+.third-slider #third-next 
+{
+    font-size: 20px;
+    right: 10px;
+}
 #tile-cover-sao
 {
     background-image: url(/main-page-photos/sword-art-online-panel.jpg);
