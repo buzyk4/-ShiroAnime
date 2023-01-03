@@ -21,7 +21,7 @@ body
 #top-bar
 {
     position: fixed;
-    background: linear-gradient(35deg, #b3127dd7,#5e0b85,rgb(90, 4, 160),#0d1b99); ;
+    background: linear-gradient(35deg, #b3127dd7,#5e0b85,rgb(90, 4, 160),#0d1b99);
     color: black;
     display: flex;
     z-index: 5;
@@ -167,6 +167,10 @@ strong
     font-weight: 100;
     margin-bottom: 15px;
 }
+.box h1
+{
+    background-color: #222;
+}
 .season-tile
 {
     display: block;
@@ -177,11 +181,6 @@ strong
     margin: 0px;
     position: relative;  
 }
-
-
-
-
-
 /* First panel */
 #first-panel
 {
@@ -189,18 +188,49 @@ strong
     justify-content: space-between;
     margin: 5px 10px 5px 10px;
 }
+#anime-info
+{
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    background-color: #525252;
+    border-radius: 15px;
+    margin-right: 5px;
+}
 #anime-info img
 {
     height: 192px;
     width: 135px;
+    padding: 5px;
+}
+#anime-info div 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+}
+#anime-info div h3
+{
+    text-align: center;
+    margin: 5px 5px;
+    width: fit-content;
+    height: fit-content;
+}
+#anime-info div p
+{
+
 }
 .slider 
 {
     position: relative;
     width: 725px;
-    height: 12em;
+    height: 12.5em;
     overflow: hidden;
     box-shadow: 0 0 30px rgba(104, 11, 133, 0.3);
+    background-color: #525252;
+    border-radius: 15px;
 }
 .slider #slide-wrap 
 {
@@ -313,7 +343,7 @@ strong
 {
     position: relative;
     width: 725px;
-    height: 12em;
+    height: 12.5em;
     overflow: hidden;
     box-shadow: 0 0 30px rgba(104, 11, 133, 0.3);
 }
@@ -430,7 +460,7 @@ THERE IS TILES FOR BEST-ISEKAI SECTION!!!
 {
     position: relative;
     width: 725px;
-    height: 12em;
+    height: 12.5em;
     overflow: hidden;
     box-shadow: 0 0 30px rgba(104, 11, 133, 0.3);
 }
@@ -541,40 +571,49 @@ span
     padding-right: 10px;
 
 }
+/*
+    SOUNDTRACK SECTION
+*/
+#soundtrack-board
+{
+    display: flex;
+    justify-content: center;
+    width: 88%;
+    height: 500px; 
+    background-color: #525252;
+    margin: 10px 6%;
+    border-radius: 75px 25px;
+}
+#soundtrack-board span
+{
+    padding: 10px;
+    line-height: 15px;
+    letter-spacing: 1px;
+    font-weight: 100;
+    background: none;
+}
 
 
-
-
-
-
-
-
-
-
+/*
+    BOTTOM BANNER
+*/
 #bottom-banner
 {
     display: flex;
     justify-content: space-between;
-    background-color :#76008A;
+    background: linear-gradient(35deg, #b3127dd7,#5e0b85,rgb(90, 4, 160),#0d1b99);
     
 
+}
+#bottom-banner span
+{
+   background: none;
 }
 .bottom-container
 {
     margin: 5px 30px 50px 30px;
-    background-color :#76008A;
     color: #eceaec;
     width: 400px;
-}
-h3
-{
-    border-bottom: 2px solid #222;
-    line-height: 15px;
-    margin-bottom: 15px;
-}
-h3 span
-{
-    background-color:#76008A;
 }
 #info li:before
 {
