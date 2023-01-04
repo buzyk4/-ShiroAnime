@@ -4,9 +4,10 @@
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
         <title>Shiro</title>
         <link rel="stylesheet" href="/css/style.css"/>
-        <script src="js/script.js" async></script>
+        <link rel="icon" type="image/x-icon" href="/main-page-photos/web-icon.png">
     </head>
     <body>
+        <script src="js/script.js" async></script>
         <header>
             <div id="top-bar-container">
                 <div id="top-bar">
@@ -24,10 +25,10 @@
                     </div> 
                 </div>
             </div>
-            <div class="logo">
+            <div id="logo">
                 <div class="border-gradient">
                     <div class="main-title">
-                        <strong>Shiro</strong>
+                        <strong id="page-title">Shiro 城</strong>
                     </div>
                 </div>
                 <img src="main-page-photos/logo-img.png" id="logo-img">
@@ -104,8 +105,8 @@
                                 </a>
                             </li>
                         </ul>
-                        <a id="prev" href="#">&#60;</a>
-                        <a id="next" href="#">&#62;</a>
+                        <button id="prev" href="#">&#60;</button>
+                        <button id="next" href="#">&#62;</button>
                     </div>
                 </div>
             </section>
@@ -173,8 +174,8 @@
                                 </a>
                             </li>
                         </ul>
-                        <a id="second-prev" href="#">&#60;</a>
-                        <a id="second-next" href="#">&#62;</a>
+                        <button id="second-prev" href="#">&#60;</button>
+                        <button id="second-next" href="#">&#62;</button>
                     </div>
                 </div>
             </section>
@@ -243,17 +244,33 @@
                             </li>
                         </ul>
                         <form>
-                            <a id="third-prev" href="#">&#60;</a>
-                            <a id="third-next" href="#">&#62;</a>
+                            <button id="third-prev" href="#">&#60;</button>
+                            <button id="third-next" href="#">&#62;</button>
                         </form>
                     </div>
                 </div>
                 <br>
             </section>
             <div id="soundtrack-board">
-                <span>
+                <div class="board-space">
                     <h1>Soundtracks</h1>
-                </span>
+                    <div class="music-holder">
+                        <div class="music-list-holder">
+                            <h2>Title List</h2>
+                            <ul>
+                                <li><a href="#" onclick="showVideo('vxvP9zSOL7s'); return false">Nobodyknowy - Hero's Comeback</a></li>
+                                <li><a href="#" onclick="showVideo('mbPkZsDsRoE'); return false">Young Obito Death theme 2 versions</a></li>
+                                <li><a href="#" onclick="showVideo('video3'); return false">Song 3</a></li>
+                                <li><a href="#" onclick="showVideo('video3'); return false">Song 4</a></li>
+                                <li><a href="#" onclick="showVideo('video3'); return false">Song 5</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div id="video-window">
+                            <iframe id="player" width="560" height="315" src="autoplay=1" frameborder="0" allow="accelerometer; autoplay=; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div> 
             </div>
             <!-- BOTTOM BANNER -->
             <footer id="bottom-banner">
