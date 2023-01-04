@@ -160,3 +160,8 @@ var bestRateResponsiveSlider = function() {
       bestRateResponsiveSlider(), responsiveSlider(),bestIssekaiResponsiveSlider()
       }
 
+      function showVideo(videoId) {
+        var player = document.getElementById('player');
+        player.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1';
+        document.getElementById('video-window').style.display = 'block';
+    }
