@@ -7,7 +7,6 @@ body
     margin-top: 0;
     margin-left: 10%;
     margin-right: 10%;
-    background-color: #222;
     color: #ffffff;
     font-family: 'Inter', Sans-serif;
     font-family: 'Lato', Sans-serif;
@@ -142,6 +141,10 @@ body
     background: linear-gradient(35deg, #5308cc,#760673,rgb(85, 5, 138),#550d99); 
     border-radius: 20px;   
 }
+main
+{
+    background-color: rgb(15, 15, 15);
+}
 .main-title
 {
     display: flex;
@@ -157,6 +160,24 @@ body
 {
     margin-right: 330px;
 }
+#first-section-title
+{
+    font-size: 1.5rem;
+    font-weight: 300;
+    height: 110px;
+    background-color: rgb(15, 15, 15);
+}
+#first-section-title h1
+{
+    text-align: center;
+    margin-top: 0;
+    padding-top: 1em;
+}
+#first-section
+{
+    background-color: #222;
+    border-radius: 6px;
+}
 .box-container
 {
     padding: 0px 5px 5px
@@ -165,13 +186,13 @@ body
 {
     color: #eceaec;
     border-bottom: 2px solid #525252;
-    padding: 0;
+    padding: 10px;
     line-height: 15px;
     letter-spacing: 1px;
     font-weight: 100;
     margin-bottom: 15px;
 }
-.box h1
+.box h2
 {
     background-color: #222;
 }
@@ -197,7 +218,7 @@ body
     display: flex;
     justify-content: space-between;
     width: 40%;
-    background-color: #525252;
+    background-color:hsla(0,0%,100%,.1);;
     border-radius: 15px;
     margin-right: 5px;
 }
@@ -229,7 +250,7 @@ body
     height: 12.5em;
     overflow: hidden;
     box-shadow: 0 0 30px rgba(104, 11, 133, 0.3);
-    background-color: #525252;
+    background-color: hsla(0,0%,100%,.1);;
     border-radius: 15px;
 }
 .slider #slide-wrap 
@@ -576,71 +597,100 @@ span
 */
 #soundtrack-board
 {
-    display: flex;
-    justify-content: center;
-    height: 500px; 
-    background-color: #525252;
-    margin: 10px 6%;
-    border-radius: 75px 25px;
+  background-color: rgba(0,0,0,.6);
 }
-#soundtrack-board .music-holder
+.null
 {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  isolation: isolate;
 }
-#soundtrack-board h1
+.first
 {
-    text-align: center;
+  display: grid;
+  grid-gap: 20px;
+  padding-top: 20px;
+  background-color: rgb(15, 15, 15);
+  height: 1000px;
+  width: 100%; 
 }
-#soundtrack-board, #soundtrack-board .board-space
+.first-first
 {
-    width: 90%;
+  max-width: 1955px;
 }
-#soundtrack-board .board-space
+.section-title
 {
-    padding: 10px;
-    line-height: 15px;
-    letter-spacing: 1px;
-    font-weight: 100;
-    background: none;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+  min-height: 200px;
+  position: relative;
 }
-.music-list-holder
+.section-title h2
 {
-    display: flex;
-    flex-direction: column;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+}
+.thre
+{
+  grid-gap: var(--row-gap) var(--column-gap);
+  display: grid;
+  grid-template: auto/repeat(auto-fill,minmax(max(var(--min-column-width),25%),1fr));
+  --min-column-width: 270px;
+  --item-height: 64px;
+  column-gap: 18px;
+  row-gap: 12px;
+  margin-left: 6px;
+  margin-right: 6px;
+}
+.element
+{
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  background-color: hsla(0,0%,100%,.1);
+  border-radius: 4px;
+}
+.element:hover
+{
+  background-color: rgb(20, 19, 19);
+}
+.img-holder, .img-holder img
+{
+  width: 60px;
+  height: 60px;
+}
+.text-holder
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin-left: 5px;
+}
+.text-holder a
+{
+  text-align: center;
+  text-decoration: none;
+  color: whitesmoke;
+  font-weight: 600;
+  font-size: 1rem;
+}
 
+#video-section
+{
+  display: flex;
+  justify-content: center;
+  background-color: hsla(0,0%,100%,.1);
+  border-radius: 8px;
 }
 #video-window
 {
-    margin-top: 5.15625em;
-    margin-bottom: ;
+  margin-top: 30px;
+  background-color: dimgray;
+  height: 630px;
 }
-
-.music-list-holder ul
-{
-    padding: 0;
-}
-.music-list-holder ul li::before
-{
-    content: url(/main-page-photos/play-music-icon.png);
-    padding-right: 5px; 
-}
-.music-list-holder  li a
-{
-    color: black;
-    text-decoration: none;
-    padding: 2px;
-}
-
-#video-window
-{
-
-    background-color: #222;
-    width: 560px;
-    height: 315px;
-}
-
-
 /*
     BOTTOM BANNER
 */
