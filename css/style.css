@@ -12,6 +12,10 @@ body
     font-family: 'Lato', Sans-serif;
     font-family: 'Noto Sans', Sans-serif;
 }
+header
+{
+    box-shadow: 0 0 30px #340913;
+}
 #top-bar-container
 {
    width: 80%;
@@ -144,6 +148,7 @@ body
 main
 {
     background-color: rgb(15, 15, 15);
+    box-shadow: 0 0 30px #340913;
 }
 .main-title
 {
@@ -165,12 +170,12 @@ main
     font-size: 1.5rem;
     font-weight: 300;
     height: 110px;
-    background-color: rgb(15, 15, 15);
+    background: linear-gradient(35deg,black, rgb(15, 15, 15), #222, rgb(15, 15, 15), black);
 }
 #first-section-title h1
 {
     text-align: center;
-    margin-top: 0;
+    margin: 0;
     padding-top: 1em;
 }
 #first-section
@@ -191,6 +196,7 @@ main
     letter-spacing: 1px;
     font-weight: 100;
     margin-bottom: 15px;
+    margin-top: 0;
 }
 .box h2
 {
@@ -213,7 +219,7 @@ main
     justify-content: space-between;
     margin: 5px 10px 5px 10px;
 }
-#anime-info
+.anime-info
 {
     display: flex;
     justify-content: space-between;
@@ -221,14 +227,15 @@ main
     background-color:hsla(0,0%,100%,.1);;
     border-radius: 15px;
     margin-right: 5px;
+    box-shadow: 0 0 30px black;;
 }
-#anime-info img
+.anime-info img
 {
     height: 192px;
     width: 135px;
     padding: 5px;
 }
-#anime-info div 
+.anime-info div 
 {
     display: flex;
     flex-direction: column;
@@ -236,7 +243,7 @@ main
     text-align: center;
     width: 80%;
 }
-#anime-info div h3
+.anime-info div h3
 {
     text-align: center;
     margin: 5px 5px;
@@ -249,7 +256,7 @@ main
     width: 725px;
     height: 12.5em;
     overflow: hidden;
-    box-shadow: 0 0 30px rgba(104, 11, 133, 0.3);
+    box-shadow: 0 0 30px black;
     background-color: hsla(0,0%,100%,.1);;
     border-radius: 15px;
 }
@@ -284,11 +291,12 @@ main
 {
     background-color: rgba(111, 17, 165, 0.5);
     text-shadow: 0;
+    cursor: pointer;
 }
 .slider:hover #prev, .slider:hover #next
 {
     visibility: visible;
-    background-color: rgba(30, 29, 31, 0.788);
+    background-color: rgba(65, 65, 66, 0.788);
 } 
 .slider ul li 
 {
@@ -366,7 +374,7 @@ main
     width: 725px;
     height: 12.5em;
     overflow: hidden;
-    box-shadow: 0 0 30px rgba(104, 11, 133, 0.3);
+    box-shadow: 0 0 30px black;
 }
 .second-slider ul 
 {
@@ -403,7 +411,7 @@ main
 .second-slider:hover #second-prev, .second-slider:hover #second-next
 {
     visibility: visible;
-    background-color: rgba(30, 29, 31, 0.788);
+    background-color: rgba(65, 65, 66, 0.788);
 } 
 #second-slider ul li 
 {
@@ -483,7 +491,7 @@ THERE IS TILES FOR BEST-ISEKAI SECTION!!!
     width: 725px;
     height: 12.5em;
     overflow: hidden;
-    box-shadow: 0 0 30px rgba(104, 11, 133, 0.3);
+    box-shadow: 0 0 30px black;
 }
 .third-slider ul 
 {
@@ -520,7 +528,7 @@ THERE IS TILES FOR BEST-ISEKAI SECTION!!!
 .third-slider:hover #third-prev, .third-slider:hover #third-next
 {
     visibility: visible;
-    background-color: rgba(30, 29, 31, 0.788);
+    background-color: rgba(65, 65, 66, 0.788);
 } 
 #third-slider ul li 
 {
