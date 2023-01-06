@@ -17,9 +17,10 @@ header
     box-shadow: 0 0 30px #340913;
 }
 #top-bar-container
-{
-   width: 80%;
-   height: 50px; 
+{  
+    position: relative; 
+    display: flex;
+    height: 50px;
 }
 #top-bar
 {
@@ -126,7 +127,9 @@ header
     display:flex;
     justify-content: space-between;
     height: 241px;
+    width: 100%;
     background-image: url(/main-page-photos/header.png);
+    
 }
 #page-title
 {
@@ -607,24 +610,21 @@ span
 {
   background-color: rgba(0,0,0,.6);
 }
-.null
+.second-section
 {
   display: flex;
   flex-direction: column;
   isolation: isolate;
 }
-.first
+.second-section-content
 {
   display: grid;
   grid-gap: 20px;
   padding-top: 20px;
   background-color: rgb(15, 15, 15);
   height: 1000px;
-  width: 100%; 
-}
-.first-first
-{
-  max-width: 1955px;
+  width: 100%;
+  max-width: 1955px; 
 }
 .section-title
 {
@@ -640,7 +640,7 @@ span
   font-weight: 700;
   text-align: center;
 }
-.thre
+.spotify-tiles
 {
   grid-gap: var(--row-gap) var(--column-gap);
   display: grid;
@@ -695,9 +695,15 @@ span
 }
 #video-window
 {
-  margin-top: 30px;
+  margin: 30px;
   background-color: dimgray;
-  height: 630px;
+  height: 600px;
+  width: 80%;
+}
+#video-window iframe
+{
+    width: 100%;
+    height: 600px;
 }
 /*
     BOTTOM BANNER
