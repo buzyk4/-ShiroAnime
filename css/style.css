@@ -229,7 +229,7 @@ main
     width: 40%;
     background-color:hsla(0,0%,100%,.1);;
     border-radius: 15px;
-    margin-right: 5px;
+    margin-right: 23em;
     box-shadow: 0 0 30px black;;
 }
 .anime-info img
@@ -467,9 +467,9 @@ main
 {
     background-image: url(/main-page-photos/cyberpunk-edgerunners.jpg);
 }
-#tile-cover-trotsh
+#tile-cover-cb
 {
-    background-image: url(/main-page-photos/the-rising-of-the-shield-hero.jpg);
+    background-image: url(/main-page-photos/cowboy-bebop.jpg);
 }
 #tile-cover-ns
 {
@@ -563,6 +563,38 @@ THERE IS TILES FOR BEST-ISEKAI SECTION!!!
 #tile-cover-mt
 {
     background-image: url(/main-page-photos/mushoku-tensei-panel.jpg);
+}
+#tile-cover-trotsh
+{
+    background-image: url(/main-page-photos/the-rising-of-the-shield-hero.jpg);
+}
+#tile-cover-teis
+{
+    background-image: url(/main-page-photos/the-eminence-in-shadow.jpg);
+}
+#tile-cover-ttk
+{
+    background-image: url(/main-page-photos/the-twelve-kingdoms.jpg);
+}
+#tile-cover-tbatb
+{
+    background-image: url(/main-page-photos/the-boy-and-the-beast.jpg);
+}
+#tile-cover-sotte
+{
+    background-image: url(/main-page-photos/saga-of-tanya-the-evil.jpg);
+}
+#tile-cover-tsiapt
+{
+    background-image: url(/main-page-photos/the-devil-is-a-part-timer.jpg);
+}
+#tile-cover-ttigraas
+{
+    background-image: url(/main-page-photos/that-time-i-got-reincarnated-as-a-slime.jpg);
+}
+#tile-cover-ngnl
+{
+    background-image: url(/main-page-photos/no-game-no-life.jpg);
 }
 .tile-title
 {
