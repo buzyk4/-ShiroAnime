@@ -1,0 +1,19 @@
+.first-panel
+{
+    flex-direction: column;
+    align-items: center;
+}
+.second-panel
+{
+    flex-direction: column;
+    align-items: center;
+}
+.third-panel
+{
+    flex-direction: column;
+    align-items: center;
+}
+.anime-info
+{
+    margin: 2em 0;
+}

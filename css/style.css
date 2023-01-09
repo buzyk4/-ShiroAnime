@@ -216,7 +216,7 @@ main
     position: relative;  
 }
 /* First panel */
-#first-panel
+.first-panel
 {
     display: flex;
     justify-content: space-between;
@@ -226,7 +226,7 @@ main
 {
     display: flex;
     justify-content: space-between;
-    width: 35em;
+    width: 45em;
     background-color:hsla(0,0%,100%,.1);;
     border-radius: 15px;
     margin-right: 20%;
@@ -365,7 +365,7 @@ main
     background-image: url(/main-page-photos/overlord-iv.jpg);
 }
 /* Second panel */
-#second-panel
+.second-panel
 {
     display: flex;
     justify-content: space-between;
@@ -482,7 +482,7 @@ main
 /*
 THERE IS TILES FOR BEST-ISEKAI SECTION!!!
 */
-#third-panel
+.third-panel
 {
     display: flex;
     justify-content: space-between;
