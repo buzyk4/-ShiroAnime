@@ -226,10 +226,10 @@ main
 {
     display: flex;
     justify-content: space-between;
-    width: 40%;
+    width: 35em;
     background-color:hsla(0,0%,100%,.1);;
     border-radius: 15px;
-    margin-right: 23em;
+    margin-right: 20%;
     box-shadow: 0 0 30px black;;
 }
 .anime-info img
@@ -256,7 +256,7 @@ main
 .slider 
 {
     position: relative;
-    width: 725px;
+    width: 45em;
     height: 12.5em;
     overflow: hidden;
     box-shadow: 0 0 30px black;
