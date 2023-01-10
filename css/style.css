@@ -222,10 +222,39 @@ main
     justify-content: space-between;
     margin: 5px 10px 5px 10px;
 }
+.single-anime-panel h4
+{
+    margin: 2px 0px;
+}
+.information p
+{
+    margin: 1px 0px;
+}
+.information h3
+{
+    margin: 2px 0px 5px;
+}
+.rating
+{
+    display: flex;
+    justify-content: center;
+    
+}
+.rating span
+{
+    background-color: rgba(0, 0, 0, 0);
+    padding: 2px
+}
+.checked
+{
+    color: orange;
+}
+.mySlides {display:none}
+.left, .right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
 .anime-info
 {
     display: flex;
-    justify-content: space-between;
     width: 45em;
     background-color:hsla(0,0%,100%,.1);;
     border-radius: 15px;
@@ -238,20 +267,13 @@ main
     width: 135px;
     padding: 5px;
 }
-.anime-info div 
+.anime-info .single-anime-panel
 {
     display: flex;
     flex-direction: column;
+    text-align: center;
     align-items: center;
-    text-align: center;
-    width: 80%;
-}
-.anime-info div h3
-{
-    text-align: center;
-    margin: 5px 5px;
-    width: fit-content;
-    height: fit-content;
+    width: 100%;
 }
 .slider 
 {
