@@ -166,14 +166,8 @@ var bestRateResponsiveSlider = function() {
         document.getElementById('video-window').style.display = 'block';
     }
 
-    function showContent(contentDirection) {
-      var direction = document.getElementsByClassName('platform' + contendDirection)
-      direction.src = 
-      document.getElementsByClassName('first-panel').style.display = 'block'; 
 
-    }
-
-    var slideIndex = 1;
+var slideIndex = 1;
 showDivs(slideIndex);
 
 function plusDivs(n) {
@@ -186,7 +180,7 @@ function currentDiv(n) {
 
 function showDivs(n) {
   var i;
-  var x = document.getElementsByClassName("mySlides");
+  var x = document.getElementsByClassName("slides");
   var dots = document.getElementsByClassName("demo");
   if (n > x.length) {slideIndex = 1}
   if (n < 1) {slideIndex = x.length}
