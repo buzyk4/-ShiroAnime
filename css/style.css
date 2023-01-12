@@ -225,10 +225,9 @@ main
 .anime-info
 {
     display: flex;
-    width: 45em;
+    width: 48%;
     background-color:hsla(0,0%,100%,.1);;
     border-radius: 15px;
-    margin-right: 20%;
     box-shadow: 0 0 30px black;;
 }
 .card-slider
@@ -241,11 +240,12 @@ main
     background-color: hsla(0,0%,100%,.1);;
     border-radius: 15px;
 }
-.card-slider ul
+.card-slider-wrap
 {
     position: relative;
     list-style: none;
     height: 200px;
+    width: 450em;
     padding: 0;
     margin: 0;
     transition: all 750ms ease;
@@ -254,6 +254,10 @@ main
 .my-slides
 {
     display: flex !important;
+    position: relative;
+    height: 100%; 
+    width: 520px;
+    float: left;
 }
 .anime-info img
 {
@@ -293,32 +297,33 @@ main
 {
     color: orange;
 }
-.left, .right
-{ 
-    cursor: pointer;
-    width: 30px;
-    height: 30px;
-    font-size: 1.2rem;
-    background-color:#222;
+.card-slider #left, .card-slider #right
+{
+    width: 40px;
+    line-height: 35px;
     border-radius: 50%;
+    font-size: 2rem;
+    visibility: hidden;
     text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    text-align: center;
     color: white;
     text-decoration: none;
     position: absolute;
-    text-align: center;
     top: 50%;
-    padding: 0px;
     transform: translateY(-50%);
     transition: all 150ms ease;
 }
-.card-buttons .right
+.card-slider #left:hover, .card-slider #right:hover 
 {
-    right: 10px;
+    background-color: rgba(111, 17, 165, 0.5);
+    text-shadow: 0;
+    cursor: pointer;
 }
-.card-buttons .left
+.card-slider:hover #left, .card-slider:hover #right
 {
-    left: 10px;
-}
+    visibility: visible;
+    background-color: #222;
+} 
 .anime-info .single-anime-panel
 {
     display: flex;
@@ -326,10 +331,21 @@ main
     align-items: center;
     width: 100%;
 }
+
+.card-slider #left
+{
+    font-size: 20px;
+    left: 10px;
+}
+.card-slider #right
+{
+    font-size: 20px;
+    right: 10px;
+}
 .slider 
 {
     position: relative;
-    width: 45em;
+    width: 48%;
     height: 12.5em;
     overflow: hidden;
     box-shadow: 0 0 30px black;
