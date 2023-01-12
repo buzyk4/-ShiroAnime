@@ -226,76 +226,48 @@ main
 {
     display: flex;
     width: 48%;
-    background-color:hsla(0,0%,100%,.1);;
+    background-color:hsla(0,0%,100%,.1);
     border-radius: 15px;
     box-shadow: 0 0 30px black;;
 }
 .card-slider
 {
     position: relative;
+    display: flex;
     width: 100%;
     height: 12.5em;
     overflow: hidden;
     box-shadow: 0 0 30px black;
-    background-color: hsla(0,0%,100%,.1);;
+    background-color: rgba(122, 122, 122, 0.1);
     border-radius: 15px;
 }
-.card-slider-wrap
+.number-text
 {
-    position: relative;
-    list-style: none;
-    height: 200px;
-    width: 450em;
-    padding: 0;
-    margin: 0;
-    transition: all 750ms ease;
-    left: 0;
+    position: absolute;
+    visibility: hidden;
 }
-.my-slides
+.mySlides, .card-description .text
 {
-    display: flex !important;
-    position: relative;
-    height: 100%; 
-    width: 520px;
-    float: left;
+   width: 100%; 
+}
+.card-description
+{
+    display: flex;
+}
+.card-description .text
+{
+    text-align: center;
+}
+.text span
+{
+    background: none;
+    text-align: left;
 }
 .anime-info img
 {
     height: 192px;
     width: 135px;
     padding: 5px;
-}
-.single-anime-panel h4
-{
-    margin: 2px 0px;
-}
-.single-anime-panel .information
-{
-    text-align: center;
-}
-.information h3
-{
-    margin: 2px 0px 5px;
-}
-.information p
-{
-    margin: 4px 0px;
-    font-size: 13px;
-}
-.rating
-{
-    display: flex;
-    justify-content: center;
-    
-}
-.rating span
-{
-    background-color: rgba(0, 0, 0, 0);
-    padding: 2px
-}
-.checked
-{
-    color: orange;
 }
 .card-slider #left, .card-slider #right
 {
@@ -324,14 +296,6 @@ main
     visibility: visible;
     background-color: #222;
 } 
-.anime-info .single-anime-panel
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
-
 .card-slider #left
 {
     font-size: 20px;
@@ -342,6 +306,7 @@ main
     font-size: 20px;
     right: 10px;
 }
+
 .slider 
 {
     position: relative;
