@@ -253,20 +253,49 @@ main
 .card-description
 {
     display: flex;
+    height: 200px;
 }
 .card-description .text
 {
     text-align: center;
+}
+.text h3
+{
+    margin: 10px;
+    text-transform: capitalize;
 }
 .text span
 {
     background: none;
     text-align: left;
 }
+.watch-anime-link
+{
+    text-decoration: none;
+    color: purple;
+    font-weight: 600;
+    font-size: 18px;
+}
+.text span ul
+{
+    padding-left: 25px;
+    padding-top: 15px;
+    margin: 0;
+}
+.text ul li
+{
+    display: flex;
+    font-size: 15px;
+    font-weight: 100;
+}
+.text ul h4
+{
+    margin: 0 8px;
+}
 .anime-info img
 {
-    height: 192px;
     width: 135px;
+    height: 192px;
     padding: 5px;
 }
 .card-slider #left, .card-slider #right

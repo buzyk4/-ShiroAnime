@@ -165,6 +165,7 @@ function showVideo(videoId) {
   player.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1';
   document.getElementById('video-window').style.display = 'block';
   }
+{
   let slideIndex = 1;
   showSlides(slideIndex);
   
@@ -193,3 +194,4 @@ function showVideo(videoId) {
     slides[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " active";
   }
+}
