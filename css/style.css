@@ -225,10 +225,16 @@ main
 .anime-info
 {
     display: flex;
-    width: 48%;
+    width: 49.5%;
+    max-width: 870px;
+    margin-right: 1%;
     background-color:hsla(0,0%,100%,.1);
     border-radius: 15px;
     box-shadow: 0 0 30px black;;
+}
+.anime-info:hover
+{
+    height: 550px
 }
 .card-slider
 {
@@ -237,8 +243,6 @@ main
     width: 100%;
     height: 12.5em;
     overflow: hidden;
-    box-shadow: 0 0 30px black;
-    background-color: rgba(122, 122, 122, 0.1);
     border-radius: 15px;
 }
 .number-text
@@ -339,7 +343,9 @@ main
 .slider 
 {
     position: relative;
-    width: 48%;
+    width: 49.5%;
+    min-width: 725px;
+    max-width: 870px;
     height: 12.5em;
     overflow: hidden;
     box-shadow: 0 0 30px black;
