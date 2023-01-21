@@ -194,3 +194,11 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
+
+var cards = document.querySelectorAll('.card');
+
+[...cards].forEach((card)=>{
+  card.addEventListener( 'click', function() {
+    card.classList.toggle('is-flipped');
+  });
+});
