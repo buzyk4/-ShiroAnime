@@ -359,6 +359,12 @@ main
     font-size: 20px;
     right: 10px;
 }
+.play-trailer
+{
+    height: 500px;
+    width: 725px;
+    background-color: rgb(49, 49, 49);
+}
 
 .slider 
 {
