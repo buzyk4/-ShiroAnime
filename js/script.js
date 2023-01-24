@@ -166,6 +166,13 @@ function showVideo(videoId) {
   document.getElementById('video-window').style.display = 'block';
   }
 
+function showAnime(videoId) {
+  var player = document.getElementById('play-anime');
+  player.src = 'https://mega.nz/embed/' + videoId + '?autoplay=1';
+  document.getElementsByClassName('video-trailer').style.display = 'block';
+  }
+
+
 let slideIndex = 1;
 showSlides(slideIndex);
   
@@ -202,3 +209,4 @@ var cards = document.querySelectorAll('.card');
     card.classList.toggle('is-flipped');
   });
 });
+

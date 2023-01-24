@@ -11,7 +11,7 @@ body
     font-family: 'Inter', Sans-serif;
     font-family: 'Lato', Sans-serif;
     font-family: 'Noto Sans', Sans-serif;
-    box-shadow: 0 0 30px #3a3738;
+    box-shadow: 0 0 30px #5e0b85;
 }
 #top-bar-container
 {  
@@ -220,47 +220,38 @@ main
     gap: 15px;
     margin: 5px 10px 5px 10px;
 }
-.scene-card
+.hold-my-player
 {
-    display: inline-block;
-    min-width: 725px;
-    height: 500px;
-    perspective: 2175px;
-}
-.card
-{
-    position:relative;
-    min-width: 100%;
-    height: 100%;
-    cursor: pointer;
-    transform-origin: center right;
-    transform-style: preserve-3d;
-    transition: 1s;
-}
-.card.is-flipped {
-    transform: translateX(-100%) rotateY(-180deg);
-  }
-.card-back
-{
-    transform: rotateY(180deg);
-    background-color:rgb(49, 49, 49);
-    min-width: 725px;
-    height: 500px;
-    border-radius: 15px
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
 }
 .anime-info
 {   
-    backface-visibility: hidden;
     display: flex;
-    min-width: 725px;
-    height: 100%;
-    width: 100%;
+    height: 500px;
+    width: 48%;
     background-color:rgb(49, 49, 49);
     border-radius: 15px;
-    box-shadow: 0 0 30px black;;
-    cursor: pointer;
-    position: absolute;
-    z-index: 1;
+    box-shadow: 0 0 15px black;;
+}
+.mySlides
+{
+    width:100%;
+    text-align: center;
+}
+.trailers
+{
+    height: 500px;
+    width: 48%;
+    background-color: rgb(49, 49, 49);
+    border-radius: 15px;
+    box-shadow: 0 0 15px black;
+}
+.video-trailer, .play-trailer
+{
+    border-radius: 15px;
 }
 .card-slider
 {
@@ -279,32 +270,60 @@ main
 .card-description
 {
     display: flex;
-    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    width: 725px;
+    width: 100%;
 }
-.text h3
+.first-cover
 {
-    margin: 10px;
-    text-transform: capitalize;
+    width: 15em;
+    height: 16em; 
+    border: 1px solid black;
+    box-shadow: 3px 3px 5px 6px rgb(24, 24, 24);
+    border-radius: 15px;
+}
+.mini-controls
+{
+    display: flex;
+    justify-content: space-around;
+    gap: 5px;
+}
+.play-mini, .episodes-mini
+{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+}
+.play-mini span, .episodes-mini span
+{
+    background-color: white;
+}
+.play-mini:hover, .play-mini:hover span, .episodes-mini:hover, .episodes-mini:hover span
+{
+    background-color: rgb(214, 214, 214);
+}
+.text
+{
+    border: 1px solid black;
+    box-shadow: 3px 3px 5px 6px rgb(24, 24, 24);
+    border-radius: 15px;
 }
 .text span
 {
     background: none;
-    text-align: left;
 }
-.watch-anime-link
+.text h4
 {
-    text-decoration: none;
-    color: purple;
-    font-weight: 600;
-    font-size: 18px;
+    margin: 10px 0px 10px 0px;
+    padding: 0 10px 0 10px
 }
-.text span ul
+.text ul
 {
-    padding-left: 25px;
-    padding-top: 15px;
-    margin: 0;
+    margin: 5px 0px 5px 0px;
+    padding: 0 10px 0 10px;
 }
 .text ul li
 {
@@ -312,8 +331,9 @@ main
     font-size: 15px;
     font-weight: 100;
 }
-.text ul h4
+.text h5
 {
+    text-transform: capitalize;
     margin: 0 8px;
 }
 .anime-info img
@@ -359,13 +379,6 @@ main
     font-size: 20px;
     right: 10px;
 }
-.play-trailer
-{
-    height: 500px;
-    width: 725px;
-    background-color: rgb(49, 49, 49);
-}
-
 .slider 
 {
     position: relative;

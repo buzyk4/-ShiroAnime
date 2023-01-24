@@ -109,23 +109,35 @@
                             <button id="prev" href="#">&#10094;</button>
                             <button id="next" href="#">&#10095;</button>
                         </div>
-                        <div class="scene-card">
-                            <div class="card">
+                        <div class="hold-my-player">
                                 <div class="anime-info">
                                     <div class="card-slider">
                                         <div class="mySlides">
                                             <div class="number-text">1 / 10</div>
+                                            <h3>Bleach: Sennen Kessen Hen</h3>
                                             <div class="card-description">
-                                                <h3>Bleach: Sennen Kessen Hen</h3>
-                                                <img src="main-page-photos/bleach-new-season.jpg" >
+                                                <div class="first-cover">
+                                                    <img src="main-page-photos/bleach-new-season.jpg" >
+                                                    <div class="mini-controls">
+                                                        <button class="play-mini" onclick="showAnime('LURxzK5a#H138H76QauisYpauZ5QlELK7dqE4s5gkAGpIw4JdMxw')">
+                                                        <div class="play-mini-icon">
+                                                                <img src="/main-page-photos/play-button.png" style="height:16px; width:16px;">
+                                                        </div>
+                                                        <span>Play</span>
+                                                        </button>
+                                                        <button class="episodes-mini" >
+                                                            <span>All Episodes</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
                                                 <div class="text">
                                                     <span>
-                                                        <a class="watch-anime-link" href="https://shinden.pl/titles/56295-bleach-sennen-kessen-hen">Watch Here</a>
+                                                        <h4>Informations:</h4>
                                                         <ul>
-                                                            <li><h4>Status:</h4>Finished</li>
-                                                            <li><h4>Emission date:</h4>11.10.2022</li>
-                                                            <li><h4>Episodes list:</h4>13</li>
-                                                            <li><h4>Episodes length:</h4>24min</li>
+                                                            <li><h5>Status:</h5>Finished</li>
+                                                            <li><h5>Emission date:</h5>11.10.2022</li>
+                                                            <li><h5>Episodes list:</h5>13</li>
+                                                            <li><h5>Episodes length:</h5>24min</li>
                                                         </ul>
                                                     </span>
                                                 </div>
@@ -304,16 +316,12 @@
                                         </div>
                                         <button id="left" href="#" onclick="plusSlides(-1, 0);">&#10094;</button>
                                         <button id="right" href="#" onclick="plusSlides(1, 0)">&#10095;</button>
-                                    </div>
-                                </div>
-                                <div class="card-back">
-                                    
                                 </div>
                             </div>
-                        </div>
-                        <div class="trailers">
-                            <div class="video-trailer">
-                                <iframe class="play-trailer"  src="autoplay=1" frameborder="0" allow="accelerometer; autoplay=; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <div class="trailers">
+                                <div class="video-trailer" style="width:100%; height:100%;">
+                                    <iframe class="play-trailer" id="play-anime" src="autoplay=1" frameborder="0" allow="accelerometer; autoplay=; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width:100%; height:100%;"></iframe>
+                                </div>
                             </div>
                         </div>
                     </div>
