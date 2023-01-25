@@ -172,6 +172,11 @@ function showAnime(videoId) {
   document.getElementsByClassName('video-trailer').style.display = 'block';
   }
 
+function showTrailer(videoId) {
+  var player = document.getElementById('play-anime');
+  player.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1';
+  document.getElementsByClassName('video-trailer').style.display = 'block';
+  }
 
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -210,3 +215,17 @@ var cards = document.querySelectorAll('.card');
   });
 });
 
+function allEpisodes() {
+  var ble = document.getElementById("ble-cover");
+  var sol = document.getElementById("sol-cover");
+  var mis = document.getElementById("mis-cover");
+  ble.className += " turned-on";
+  sol.className += " turned-on";
+  mis.className += " turned-on";
+}
+
+function backToCover() {
+  document.getElementById("ble-cover").classList.remove('turned-on')
+  document.getElementById("sol-cover").classList.remove('turned-on')
+  document.getElementById("mis-cover").classList.remove('turned-on')
+}
