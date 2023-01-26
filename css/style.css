@@ -255,6 +255,7 @@ main
     position: absolute; 
     width: 100%;
     height: 100%;
+    border-radius: 15px;
     visibility: hidden;
     display: flex;
     flex-direction: column;
@@ -514,12 +515,14 @@ main
 {
     background-image: url(/main-page-photos/overlord-iv.jpg);
 }
-.new-premiere-trailers
+
 /* Second panel */
+
 .second-panel
 {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     margin: 5px 10px 5px 10px;
 }
 .second-slider 
@@ -527,6 +530,7 @@ main
     position: relative;
     width: 725px;
     height: 12.5em;
+    margin: 0;
     overflow: hidden;
     box-shadow: 0 0 30px black;
 }
