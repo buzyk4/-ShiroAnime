@@ -220,7 +220,7 @@ main
     gap: 15px;
     margin: 5px 10px 5px 10px;
 }
-.hold-my-player
+.inf-play-container
 {
     display: flex;
     justify-content: space-between;
@@ -236,6 +236,15 @@ main
     border-radius: 15px;
     box-shadow: 0 0 15px black;;
 }
+.card-slider
+{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 500px;
+    border-radius: 15px;
+}
+
 .mySlides
 {
     width:100%;
@@ -247,6 +256,9 @@ main
     width: 100%;
     height: 100%;
     visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .turned-on
 {
@@ -255,9 +267,9 @@ main
     height: 100%;
     visibility:visible;
     z-index: 1;
-    background-color: #000000;
+    background-color: rgb(49, 49, 49);
 }
-.trailers
+.video-play-window
 {
     height: 500px;
     width: 48%;
@@ -267,14 +279,6 @@ main
 }
 .video-trailer, .play-trailer
 {
-    border-radius: 15px;
-}
-.card-slider
-{
-    position: relative;
-    display: flex;
-    width: 100%;
-    height: 500px;
     border-radius: 15px;
 }
 .number-text
@@ -345,6 +349,12 @@ main
 {
     text-transform: capitalize;
     margin: 0 8px;
+    font-size: 15px;
+}
+.shortcut
+{
+    padding: 10px;
+    margin-bottom: 10px;
 }
 .shortcut span
 {

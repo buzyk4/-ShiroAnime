@@ -164,19 +164,7 @@ function showVideo(videoId) {
   var player = document.getElementById('player');
   player.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1';
   document.getElementById('video-window').style.display = 'block';
-  }
-
-function showAnime(videoId) {
-  var player = document.getElementById('play-anime');
-  player.src = 'https://mega.nz/embed/' + videoId + '?autoplay=1';
-  document.getElementsByClassName('video-trailer').style.display = 'block';
-  }
-
-function showTrailer(videoId) {
-  var player = document.getElementById('play-anime');
-  player.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1';
-  document.getElementsByClassName('video-trailer').style.display = 'block';
-  }
+}
 
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -215,17 +203,51 @@ var cards = document.querySelectorAll('.card');
   });
 });
 
+function showAnime(videoId) {
+  var player = document.getElementById('play-anime');
+  player.src = 'https://mega.nz/embed/' + videoId + '?autoplay=1';
+  document.getElementsByClassName('video-trailer').style.display = 'block';
+}
+
+function showTrailer(videoId) {
+  var player = document.getElementById('play-anime');
+  player.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1';
+  document.getElementsByClassName('video-play').style.display = 'block';
+}
+
+
 function allEpisodes() {
   var ble = document.getElementById("ble-cover");
   var sol = document.getElementById("sol-cover");
   var mis = document.getElementById("mis-cover");
+  var vin = document.getElementById("vin-cover");
+  var cha = document.getElementById("cha-cover");
+  var spy = document.getElementById("spy-cover");
+  var bok = document.getElementById("bok-cover");
+  var blu = document.getElementById("blu-cover");
+  var mob = document.getElementById("mob-cover");
+  var ove = document.getElementById("ove-cover");
   ble.className += " turned-on";
   sol.className += " turned-on";
   mis.className += " turned-on";
+  vin.className += " turned-on";
+  cha.className += " turned-on";
+  spy.className += " turned-on";
+  bok.className += " turned-on";
+  blu.className += " turned-on";
+  mob.className += " turned-on";
+  ove.className += " turned-on";
 }
 
 function backToCover() {
   document.getElementById("ble-cover").classList.remove('turned-on')
   document.getElementById("sol-cover").classList.remove('turned-on')
   document.getElementById("mis-cover").classList.remove('turned-on')
+  document.getElementById("vin-cover").classList.remove('turned-on')
+  document.getElementById("cha-cover").classList.remove('turned-on')
+  document.getElementById("spy-cover").classList.remove('turned-on')
+  document.getElementById("bok-cover").classList.remove('turned-on')
+  document.getElementById("blu-cover").classList.remove('turned-on')
+  document.getElementById("mob-cover").classList.remove('turned-on')
+  document.getElementById("ove-cover").classList.remove('turned-on')
 }
