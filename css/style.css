@@ -226,6 +226,7 @@ main
     justify-content: space-between;
     gap: 10px;
     width: 100%;
+    
 }
 .anime-info
 {   
@@ -249,6 +250,8 @@ main
 {
     width:100%;
     text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 .episodes-side
 {
@@ -268,7 +271,16 @@ main
     height: 100%;
     visibility:visible;
     z-index: 1;
-    background-color: rgb(49, 49, 49);
+    background-color: rgb(49, 49, 49);  
+}
+.episodes-side ol
+{
+    padding: 0;
+}
+.episodes-side a
+{
+    text-decoration: none;
+    color: black;
 }
 .video-play-window
 {
@@ -294,14 +306,17 @@ main
     align-items: center;
     width: 90%;
     margin: 0 5% 5% 5%;
-    box-shadow: 3px 3px 5px 6px rgb(24, 24, 24);
-    border-radius: 15px;
 }
 .first-cover
 {
     width: 15em;
     height: 16em; 
     border-radius: 15px;
+}
+.first-cover .this-cover
+{
+    border: 2px solid black;
+    box-shadow:0 0 15px black;
 }
 .mini-controls
 {
@@ -325,6 +340,12 @@ main
 .play-mini:hover, .play-mini:hover span, .episodes-mini:hover, .episodes-mini:hover span
 {
     background-color: rgb(214, 214, 214);
+}
+.text
+{
+    width: 65%;
+    height: 30%;
+    min-width: 60%;
 }
 .text span
 {
@@ -354,8 +375,8 @@ main
 }
 .shortcut
 {
-    padding: 10px;
-    margin-bottom: 10px;
+    margin:0px 10px 10px 10px;
+    height: 20%;
 }
 .shortcut span
 {

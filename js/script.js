@@ -178,7 +178,7 @@ function plusSlides(n) {
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
-  
+
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlides");
@@ -195,13 +195,6 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
-var cards = document.querySelectorAll('.card');
-
-[...cards].forEach((card)=>{
-  card.addEventListener( 'click', function() {
-    card.classList.toggle('is-flipped');
-  });
-});
 
 function showAnime(videoId) {
   var player = document.getElementById('play-anime');
