@@ -223,15 +223,17 @@ main
 .inf-play-container
 {
     display: flex;
-    justify-content: space-between;
-    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
     width: 100%;
     
 }
 .anime-info
 {   
     display: flex;
-    height: 500px;
+    height: 440px;
+    min-width: 540px;
     width: 48%;
     background-color:rgb(49, 49, 49);
     border-radius: 15px;
@@ -284,8 +286,9 @@ main
 }
 .video-play-window
 {
-    height: 500px;
+    height: 440px;
     width: 48%;
+    min-width: 540px;
     background-color: rgb(49, 49, 49);
     border-radius: 15px;
     box-shadow: 0 0 15px black;
