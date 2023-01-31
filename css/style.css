@@ -160,11 +160,11 @@ main
     font-size: 1.5em;
     font-weight: 300;
     height: 110px;
+    text-align: center;
     background: linear-gradient(35deg,black, rgb(43, 40, 40), #222, rgb(15, 15, 15), black);
 }
 #first-section-title h2
 {
-    text-align: center;
     margin: 0;
     padding-top: 1em;
 }
@@ -223,7 +223,7 @@ main
     width: 48%;
     background-color:rgb(49, 49, 49);
     border-radius: 15px;
-    box-shadow: 0 0 15px black;;
+    box-shadow: 0 0 15px black;
 }
 .card-slider
 {
@@ -636,18 +636,67 @@ main
 }
 .brick
 {
-    background-color: #222;
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(49, 49, 49);
     border-radius: 15px;
-    height: 200px;
+    height: 202px;
     width: 20em;
     margin: 10px;
 }
-.brick img
+.brick .brick-cover
 {
     height: 192px;
     width: 135px;
-    margin: 5px;
+    margin: 4px;
+    border: 1px solid black;
+    box-shadow:0 0 15px black;
 }
+.brick span
+{
+    background: none
+}
+.rating
+{
+    width: 53%;
+    text-align: center;
+}
+.rating span
+{
+    padding: 2px;
+}
+.rating img
+{
+    width: 20px;
+    height: 20px
+}
+.stars
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.stars span
+{
+    padding: 3px;
+}
+.checked
+{
+    color: orange;
+}
+.real-rating
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.real-rating span
+{
+    margin-left: 4px;
+}
+
 /*
 THERE IS TILES FOR BEST-ISEKAI SECTION!!!
 */
@@ -825,17 +874,16 @@ span
 }
 .section-title
 {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 16px;
-  min-height: 200px;
-  position: relative;
+    font-size: 1.5em;
+    font-weight: 300;
+    height: 110px;
+    text-align: center;
+    background: linear-gradient(35deg,black, rgb(43, 40, 40), #222, rgb(15, 15, 15), black);
 }
 .section-title h2
 {
-  font-size: 2rem;
-  font-weight: 700;
-  text-align: center;
+    margin: 0;
+    padding-top: 1em;
 }
 .spotify-tiles
 {
