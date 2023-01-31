@@ -887,60 +887,62 @@ span
 }
 .spotify-tiles
 {
-  display: grid;
-  grid-template: auto/repeat(auto-fill,minmax(max(var(--min-column-width),25%),1fr));
-  --min-column-width: 270px;
-  --item-height: 64px;
-  column-gap: 18px;
-  row-gap: 12px;
-  margin-left: 6px;
-  margin-right: 6px;
+    display: grid;
+    grid-template: auto/repeat(auto-fill,minmax(max(var(--min-column-width),25%),1fr));
+    --min-column-width: 270px;
+    --item-height: 64px;
+    column-gap: 18px;
+    row-gap: 12px;
+    margin-left: 6px;
+    margin-right: 6px;
 }
 .element
 {
-  display: flex;
-  overflow: hidden;
-  position: relative;
-  background-color: hsla(0,0%,100%,.1);
-  border-radius: 4px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    background-color: rgb(49, 49, 49);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.6s;
 }
-.element:hover
+.element:hover, .img-holder img
 {
-  background-color: rgb(20, 19, 19);
+    background-color: rgb(27, 27, 27);
+    opacity: 0.8; 
 }
 .img-holder, .img-holder img
 {
-  width: 60px;
-  height: 60px;
+    width: 60px;
+    height: 60px;
 }
 .text-holder
 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 80%;
-  margin-left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin-left: 5px;
 }
-.text-holder a
+.text-holder span
 {
   text-align: center;
   text-decoration: none;
   color: whitesmoke;
   font-weight: 600;
   font-size: 1rem;
+  background: none;
 }
 
 #video-section
 {
   display: flex;
   justify-content: center;
-  background-color: hsla(0,0%,100%,.1);
-  border-radius: 8px;
 }
 #video-window
 {
   margin: 30px;
-  background-color: dimgray;
+  background-color: rgb(49, 49, 49);
   height: 600px;
   width: 80%;
 }
