@@ -15,12 +15,12 @@
         <header>
             <div id="top-bar-container">
                 <div id="top-bar">
-                    <div class="top-bar-menu">
-                        <a href="" class="main-menu-button"><img id="menu-icon" src="main-page-photos/home-icon.svg"></a>
-                        <a href="" class="menu-button">Anime</a>
-                        <a href="" class="menu-button">Manga</a>
-                        <a href="" class="menu-button">Forum</a>
-                        <a href="" class="menu-button">Register</a>
+                    <div id="top-bar-menu">
+                        <a href="#" id="main-menu-button"><img id="menu-icon" src="main-page-photos/home-icon.svg"></a>
+                        <a href="#" class="menu-button">Anime</a>
+                        <a href="#" class="menu-button">Manga</a>
+                        <a href="#" class="menu-button">Forum</a>
+                        <a href="#" class="menu-button">Register</a>
                     </div>
                     <div class="top-bar-user">
                         <input class="search">
@@ -30,17 +30,15 @@
                 </div>
             </div>
             <div id="logo">
-                <div class="border-gradient">
-                    <div class="main-title">
-                        <strong id="page-title">Shiro 城</strong>
-                    </div>
+                <div class="main-title">
+                    <h1><strong id="page-title">Shiro 城</strong></h1>
                 </div>
                 <img src="main-page-photos/logo-img.png" id="logo-img">
             </div>
         </header>
         <main>
             <section id="first-section-title">
-                <h1>Anime Ranking</h1>
+                <h2>Anime Ranking</h2>
             </section>
             <!--
                  NEW PREMIERE ROW
@@ -49,9 +47,9 @@
             -->
             <section id="first-section">
                 <section class="box-container container-new-series">
-                    <h2 class="box box-title-new-series">
+                    <h3 class="box box-title-new-series">
                         <span>New Premiere</span>
-                    </h2>
+                    </h3>
                     <div class="first-panel">
                         <div class="slider">
                             <ul id="slide-wrap">
@@ -133,7 +131,7 @@
                                             </ol>
                                             <button class="episodes-mini" onclick="backToCover()"><span>Back</span></button>
                                         </div>
-                                        <h3>Bleach: Sennen Kessen Hen</h3>
+                                        <h4>Bleach: Sennen Kessen Hen</h4>
                                         <div class="shortcut">
                                             <span>
                                                 Nastolatek Ichigo Kurosaki, posiadający zdolność widzenia duchów, otrzymuje moce boga śmierci-Shinigami od Rukii Kuchiki i wyrusza, aby ocalić świat przed Pustymi.
@@ -554,9 +552,9 @@
                 <br>
                 <!-- BEST RATE ROW -->
                 <section class="box-container box-best-rate">
-                    <h2 class="box box-title-best-rate">
+                    <h3 class="box box-title-best-rate">
                         <span>Best Rate</span>
-                    </h2>
+                    </h3>
                     <div class="second-panel">
                         <div class="slider second-slider">
                             <ul id="second-slide-wrap">
@@ -614,14 +612,49 @@
                             <button id="second-prev" href="#">&#10094;</button>
                             <button id="second-next" href="#">&#10095;</button>
                         </div>
+                        <br>
+                        <div class="bricks">
+                            <div id="brick-2" class="brick">
+                                <img src="/main-page-photos/berserk.jpg">
+                            </div>
+                            <div id="brick-1" class="brick">
+                                <img src="/main-page-photos/full-metal-alchemist.jpg"> 
+                            </div>
+                            <div id="brick-3" class="brick">
+                                <img src="/main-page-photos/attack-on-titan.jpg">
+                            </div>
+                            <div id="brick-4" class="brick">
+                                <img src="/main-page-photos/demon-slayer.jpg">
+                            </div>
+                            <div id="brick-5" class="brick">
+                                <img src="/main-page-photos/hunter-x-hunter.jpg">
+                            </div>
+                            <div id="brick-6" class="brick">
+                                <img src="/main-page-photos/code-geass-hangyaku-no-lelouch.jpg">
+                            </div>
+                            <div id="brick-7" class="brick">
+                                <img src="/main-page-photos/cyberpunk-edgerunners.jpg">
+                            </div>
+                            <div id="brick-8" class="brick">
+                                <img src="/main-page-photos/cowboy-bebop.jpg">
+                            </div>
+                            <div id="brick-9" class="brick">
+                                <img src="/main-page-photos/naruto-shippuuden.jpg">
+                            </div>
+                            <div id="brick-10" class="brick">
+                                <img src="/main-page-photos/jujutsu-kaisen.jpg">
+                            </div>
+                            <div id="brick-11" class="brick">...</div>
+                            <div id="brick-12" class="brick">more content</div>
+                        </div>
                     </div>
                 </section>
                 <br>
                 <!-- BEST ISEKAI ROW-->
                 <section class="box-container container-best-isekai">
-                    <h2 class="box box-title-best-isekai">
+                    <h3 class="box box-title-best-isekai">
                         <span>Best Isekai</span>
-                    </h2>
+                    </h3>
                     <div class="third-panel">
                         <div class="slider third-slider">
                             <ul id="third-slide-wrap">
@@ -796,6 +829,5 @@
                 </div>
             </footer>
         </main>
-        <script src="js/vendor/prefixfree.min.js"></script>
     </body>
 </html>

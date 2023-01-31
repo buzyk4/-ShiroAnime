@@ -12,6 +12,7 @@ body
     font-family: 'Lato', Sans-serif;
     font-family: 'Noto Sans', Sans-serif;
     box-shadow: 0 0 30px #5e0b85;
+    background-color: rgb(34, 34, 34);
 }
 #top-bar-container
 {  
@@ -29,7 +30,7 @@ body
     justify-content: space-between;
     width: 80%;
 }
-.top-bar-menu
+#top-bar-menu
 {
     display: flex;
     align-items: center;
@@ -53,7 +54,7 @@ body
     background-color: #C3A9EF;
     color: black;
 }
-.main-menu-button
+#main-menu-button
 {
     display: flex;
     align-items: center;
@@ -66,7 +67,7 @@ body
     border: 2px solid #340913;
     border-radius: 10px;
 }
-.main-menu-button:hover
+#main-menu-button:hover
 {
     background-color: #C3A9EF;
 }
@@ -82,7 +83,6 @@ body
 }
 .search
 {
-    position: relative;
     width: 15px;
     height: 15px;
     border-radius: 10px;
@@ -123,27 +123,17 @@ body
 {
     display:flex;
     justify-content: space-between;
-    height: 241px;
+    height: 250px;
     width: 100%;
     background-image: url(/main-page-photos/header.png);
+    background-size: 100% 100%;
+    background-repeat:no-repeat;
     
 }
 #page-title
 {
-    font-size: 50px;
-    color: #9F76E7;
-}
-.border-gradient
-{
-    margin-top: 100px;
-    margin-left: 210px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
-    padding: 4px;
-    background: linear-gradient(35deg, #5308cc,#760673,rgb(85, 5, 138),#550d99); 
-    border-radius: 20px;   
+    font-size: 2.5em;
+    color: whitesmoke;
 }
 main
 {
@@ -151,14 +141,15 @@ main
 }
 .main-title
 {
+    margin: 5% 10% 5% 10%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(/main-page-photos/header.png);
+    background: none;
     text-align: center;
     border-radius: 20px;
-    width: 210px;
-    height: 60px;
+    width: 400px;
+    height: 90px;
 }
 #logo-img
 {
@@ -166,12 +157,12 @@ main
 }
 #first-section-title
 {
-    font-size: 1.5rem;
+    font-size: 1.5em;
     font-weight: 300;
     height: 110px;
     background: linear-gradient(35deg,black, rgb(43, 40, 40), #222, rgb(15, 15, 15), black);
 }
-#first-section-title h1
+#first-section-title h2
 {
     text-align: center;
     margin: 0;
@@ -180,11 +171,6 @@ main
 #first-section
 {
     background-color: #222;
-    border-radius: 6px;
-}
-.box-container
-{
-    padding: 0px 5px 5px
 }
 .box
 {
@@ -193,7 +179,7 @@ main
     padding: 10px;
     line-height: 15px;
     letter-spacing: 1px;
-    font-weight: 100;
+    
     margin-bottom: 15px;
     margin-top: 0;
 }
@@ -528,7 +514,7 @@ main
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 5px 10px 5px 10px;
+    
 }
 .second-slider 
 {
@@ -638,6 +624,29 @@ main
 #tile-cover-jk
 {
     background-image: url(/main-page-photos/jujutsu-kaisen.jpg);
+}
+
+.bricks
+{
+    width: 100%;
+    background-color: rgb(15, 15, 15);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.brick
+{
+    background-color: #222;
+    border-radius: 15px;
+    height: 200px;
+    width: 20em;
+    margin: 10px;
+}
+.brick img
+{
+    height: 192px;
+    width: 135px;
+    margin: 5px;
 }
 /*
 THERE IS TILES FOR BEST-ISEKAI SECTION!!!
@@ -798,10 +807,6 @@ span
 /*
     SOUNDTRACK SECTION
 */
-#soundtrack-board
-{
-  background-color: rgba(0,0,0,.6);
-}
 .second-section
 {
   display: flex;
