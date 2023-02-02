@@ -160,12 +160,6 @@ var bestRateResponsiveSlider = function() {
       bestRateResponsiveSlider(), responsiveSlider(), bestIssekaiResponsiveSlider()
       }
 
-function showVideo(videoId) {
-  var player = document.getElementById('player');
-  player.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1';
-  document.getElementById('video-window').style.display = 'block';
-}
-
 let slideIndex = 1;
 showSlides(slideIndex);
   
@@ -243,4 +237,18 @@ function backToCover() {
   document.getElementById("blu-cover").classList.remove('turned-on')
   document.getElementById("mob-cover").classList.remove('turned-on')
   document.getElementById("ove-cover").classList.remove('turned-on')
+}
+
+
+function showVideo(videoId) {
+  var player = document.getElementById('player');
+  player.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1';
+  document.getElementById('video-window').style.display = 'block';
+}
+
+function justWatch() {
+  var back = document.getElementById("video-window")
+  var front = document.getElementById("video-window-holder")
+  back.className += " back"
+  front.className += " front"
 }

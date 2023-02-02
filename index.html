@@ -886,7 +886,7 @@
                 <br>
                 <div class="secont-section-content">
                         <div class="spotify-tiles">
-                            <div class="element" onclick="showVideo('vxvP9zSOL7s'); return false">
+                            <div class="element" onclick="showVideo('vxvP9zSOL7s'); justWatch(); return false">
                                 <div>
                                     <div class="img-holder">
                                         <img src="/main-page-photos/naruto.jpg">
@@ -898,7 +898,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="element" onclick="showVideo('ciBz-PfvXhI'); return false">
+                            <div class="element" onclick="showVideo('ciBz-PfvXhI'); justWatch(); return false">
                                 <div>
                                     <div class="img-holder">
                                         <img src="/main-page-photos/madara.jpg">
@@ -910,7 +910,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="element" onclick="showVideo('8jRcfZ86jwo'); return false">
+                            <div class="element" onclick="showVideo('8jRcfZ86jwo'); justWatch(); return false">
                                 <div>
                                     <div class="img-holder">
                                         <img src="/main-page-photos/obito.jpg">
@@ -922,7 +922,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="element" onclick="showVideo('0H1Xd3P-xYs'); return false">
+                            <div class="element" onclick="showVideo('0H1Xd3P-xYs'); justWatch(); return false">
                                 <div>
                                     <div class="img-holder">
                                         <img src="/main-page-photos/sad-naruto.jpg">
@@ -934,7 +934,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="element" onclick="showVideo('mbPkZsDsRoE'); return false">
+                            <div class="element" onclick="showVideo('mbPkZsDsRoE'); justWatch(); return false">
                                 <div>
                                     <div class="img-holder">
                                         <img src="/main-page-photos/young-obito.jpg">
@@ -946,7 +946,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="element" onclick="showVideo('FVbZfxysGMo'); return false">
+                            <div class="element" onclick="showVideo('FVbZfxysGMo'); justWatch(); return false">
                                 <div>
                                     <div class="img-holder">
                                         <img src="/main-page-photos/akatsuki1.jpg">
@@ -961,8 +961,18 @@
                         </div>
                         <br>
                     <section id="video-section">
-                        <div id="video-window">
-                            <iframe id="player"  frameborder="0" allow="accelerometer; autoplay=; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <div id="video-cube">
+                            <div id="video-window-holder" class="video-window-holder">
+                                <h2>Fact</h2>
+                                <span>
+                                    The first song designed for an animation work was created in 1963 for the anime Tetsuwan Atom (Astro Boy).
+                                    At the time, most anime openings and endings were sung by children’s choirs,
+                                    or sometimes by one of the main voice actors of the show.
+                                </span>
+                            </div>
+                            <div id="video-window" class="video-window">
+                                <iframe id="player"  frameborder="0" allow="accelerometer; autoplay=; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
                         </div>
                     </section>
                 </div>
