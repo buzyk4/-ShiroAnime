@@ -161,16 +161,13 @@ main
 }
 #first-section-title
 {
-    font-size: 1.5em;
+    font-size: 2em;
     font-weight: 300;
-    height: 110px;
+    height: 140px;
     text-align: center;
-    background: linear-gradient(35deg,black, rgb(43, 40, 40), #222, rgb(15, 15, 15), black);
-}
-#first-section-title h2
-{
     margin: 0;
-    padding-top: 1em;
+    padding-top: 0.5em;
+    background: linear-gradient(35deg,black, rgb(43, 40, 40), #222, rgb(15, 15, 15), black);
 }
 #first-section
 {
@@ -183,13 +180,9 @@ main
     padding: 10px;
     line-height: 15px;
     letter-spacing: 1px;
-    
     margin-bottom: 15px;
     margin-top: 0;
-}
-.box h2
-{
-    background-color: #222;
+    font-size: 1.8em;
 }
 .season-tile
 {
@@ -208,16 +201,18 @@ main
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    margin: 5px 10px 5px 10px;
+    margin: 5px 0px 5px 0px;
 }
 .inf-play-container
 {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     gap: 15px;
     width: 100%;
-    
+    height: 500px;
+    background-color: rgb(15, 15, 15);
 }
 .anime-info
 {   
@@ -707,8 +702,10 @@ THERE IS TILES FOR BEST-ISEKAI SECTION!!!
 .third-panel
 {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    margin: 5px 10px 5px 10px;
+    align-items: center;
+    margin: 5px 0px 5px 0px;
 }
 .third-slider 
 {
@@ -857,6 +854,30 @@ span
     padding-right: 10px;
 
 }
+#presentation
+{
+    width: 100%;
+    height: 500px;
+    text-align: center;
+    background-color: rgb(15, 15, 15);
+}
+#presentation article
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Trebuched MS";
+    font-size: 0.;
+}
+#presentation h4
+{
+    font-size: 1.5em;
+}
+#presentation p
+{
+    width: 80%;
+    font-size: 1.2em;
+}
 /*
     SOUNDTRACK SECTION
 */
@@ -878,9 +899,9 @@ span
 }
 .section-title
 {
-    font-size: 1.5em;
+    font-size: 2em;
     font-weight: 300;
-    height: 110px;
+    height: 140px;
     text-align: center;
     background: linear-gradient(35deg,black, rgb(43, 40, 40), #222, rgb(15, 15, 15), black);
 }
