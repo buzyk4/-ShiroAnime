@@ -662,10 +662,6 @@ main
     width: 53%;
     text-align: center;
 }
-.rating span
-{
-    padding: 2px;
-}
 .rating img
 {
     width: 20px;
@@ -679,7 +675,7 @@ main
 }
 .stars span
 {
-    padding: 3px;
+    padding: 1px;
 }
 .checked
 {
