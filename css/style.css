@@ -31,13 +31,29 @@ a {
     width: 100%;
 }
 
-.nav-links {
+.nav-wrap {
     align-items: center;
     display: flex;
     height: 100%;
     margin-left: 50px;
     margin-right: 50px;
     max-width: 1050px;
+    width: 100%;
+}
+
+.logo img {
+    height: 50px;
+    width: 50px;
+}
+
+.nav-links {
+    align-items: center;
+    display: inline-flex;
+    font-family: Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+    justify-content: center;
+    text-transform: capitalize;
     width: 100%;
 }
 
