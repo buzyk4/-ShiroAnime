@@ -1,5 +1,5 @@
 body {
-    background-color: aliceblue;
+    background: rgb(var(--color-background));
     font-family: Helvetica,sans-serif;
     height: 100%;
     margin: 0;
@@ -10,6 +10,16 @@ body {
 :root {
     --color-text: 92,114,138;
     --color-text-bright: 237,241,245;
+    --color-background: 237,241,245;
+    --color-background-100: 251,251,251;
+    --color-background-200: 237,241,245;
+    --color-shadow-blue: 103,132,187;
+    --color-blue-500: 111,200,255;
+    --color-gray-400: 201,215,227;
+    --color-gray-500: 173,192,210;
+    --color-gray-900: 81,97,112;
+    --color-background-900: 81,97,112;
+
 }
 a {
     text-decoration: none;
@@ -84,9 +94,10 @@ a {
 */
 .wrap {
     margin-top: 50px;
+    background: rgb(var(--color-background-200));
 }
 
-#landing {
+.landing {
     background: #0a1625;
     border-radius: 20px;
     font-family: Helvetica ;
@@ -180,4 +191,152 @@ a {
 }
 .circle svg {
     width: 0.625em;
+}
+
+/*
+    Search section 
+*/
+.search {
+    background: rgb(var(--color-background-200));
+    min-height: 100vh;
+}
+
+.container {
+    margin: 0 auto;
+    min-width: 320px;
+    padding-left: 30px;
+    padding-right: 30px;
+    max-width: 1140px;
+    width: 100%;
+}
+
+.filters-wrap {
+    display: grid;
+    grid-template-columns: auto 42px;
+    align-items: center;
+}
+
+.filters {
+    margin: 40px 0;
+    margin-bottom: 25px;
+    display: grid;
+    grid-gap: 24px;
+    grid-template-columns: repeat(5,170px)
+}
+
+.name {
+    color: rgb(var(--color-gray-900));
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 10px 0;
+    text-transform: capitalize;
+}
+
+.search-wrap {
+    background: rgb(var(--color-background-100));
+    border-radius: 6px;
+    box-shadow: 0 14px 30px rgba(var(--color-shadow-blue),.1),0 4px 4px rgba(var(--color-shadow-blue),.04);
+    display: grid;
+    font-family: Helvetica, sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    height: 38px;
+    grid-gap: 10px;
+    grid-template-columns: 13px auto 13px;
+    letter-spacing: .03rem;
+    padding: 11px 16px;
+    padding-left: 13px;
+}
+
+.search-input {
+    background: 0 0;
+    border: none;
+    color: rgb(var(--color-gray-700));
+    display: inline-block;
+    font-family: Helvetica, sans-serif;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.select {
+    align-items: center;
+    background: rgb(var(--color-background-100));
+    border-radius: 6px;
+    box-shadow: 0 14px 30px rgba(var(--color-shadow-blue),.1),0 4px 4px rgba(var(--color-shadow-blue),.04);
+    cursor: pointer;
+    display: grid;
+    height: 38px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    grid-template-columns: auto 20px;
+    letter-spacing: .03rem;
+    padding: 11px 16px;
+}
+
+.value-wrap {
+    position: relative;
+    max-height: 14px;
+}
+
+.placeholder {
+    position: absolute;
+    font-size: 14px;
+    color: rgb(var(--color-gray-500));
+}
+
+.filter {
+    background: 0 0;
+    border: none;
+    color: rgb(var(--color-gray-700));
+    display: inline-block;
+    font-family:Helvetica, sans-serif;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.filters .svg-inline--fa {
+    color: rgb(var(--color-gray-400));
+    cursor: pointer;
+    font-size: 1.6rem;
+    transition: color .2s ease;
+    width: 0.5em;
+}
+
+.extra-filters-wrap {
+    position: relative;
+    font-family:Helvetica, sans-serif;
+    margin: 50px 0;
+    margin-bottom: 25px;
+    height: 75px;
+}
+
+.open-btn {
+    align-items: center;
+    background: rgb(var(--color-background-100));
+    border-radius: 6px;
+    box-shadow: 0 14px 30px rgba(var(--color-shadow-blue),.15),0 4px 4px rgba(var(--color-shadow-blue),.05);
+    color: rgb(var(--color-gray-500));
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 1.8rem;
+    height: 38px;
+    justify-content: center;
+    margin-top: 37px;
+    width: 38px;
+    transition: color .3s ease-in-out;
+}
+
+.open-btn svg{
+    overflow: visible;
+    width: 0.8em;
+    display: inline-block;
+    font-size: inherit;
+    height: 0.8em;
+    vertical-align: -0.125em;
+    color: rgb(var(--color-gray-500));
+    cursor: pointer;
 }
