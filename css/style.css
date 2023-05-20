@@ -1,13 +1,5 @@
 body {
-    background: rgb(var(--color-background));
-    font-family: Helvetica,sans-serif;
-    height: 100%;
-    margin: 0;
-}
-* {
-    box-sizing: border-box;
-}
-:root {
+    /* Colors */
     --color-text: 92,114,138;
     --color-text-bright: 237,241,245;
     --color-background: 237,241,245;
@@ -20,7 +12,22 @@ body {
     --color-gray-900: 81,97,112;
     --color-background-900: 81,97,112;
 
+    /* Measures */
+
+    --nav-height: 65px;
+
+    /* BODY */
+
+    background: rgb(var(--color-background));
+    font-family: Helvetica,sans-serif;
+    height: 100%;
+    margin: 0;
 }
+
+* {
+    box-sizing: border-box;
+}
+
 a {
     text-decoration: none;
     transition: .15s;
@@ -32,13 +39,19 @@ a {
 */
 .top-nav {
     display: flex;
-    height: 70px;
-    justify-content: center;
+    height: var(--nav-height);
+    width: 100%;
     left: 0;
     top: 0;
     background: #2b2d42;
     color: #bcbedc;
-    width: 100%;
+    position: fixed;
+    justify-content: center;
+    transition: 0.30s;
+}
+
+.nav--hidden {
+    transform:translateY(calc(-1 * var(--nav-height)))
 }
 
 .nav-wrap {
@@ -67,11 +80,19 @@ a {
     width: 100%;
 }
 
+.browse-wrap {
+    cursor: pointer
+}
+
 .link {
     letter-spacing: .01em;
     padding: 18px 16px;
     font-size: 0.9rem;
     font-weight: 600;
+}
+
+.link:hover, .browse-wrap> a:hover {
+    color: #dadce9;
 }
 
 .login {
@@ -89,11 +110,17 @@ a {
     margin-right: -70px;
     padding: 10px 15px;
 }
+
+.signUp:hover {
+    box-shadow: 0 2px 15px  #3577ff ;
+    transform: scale(1.02);
+}
+
 /*
     Future card
 */
 .wrap {
-    margin-top: 50px;
+    margin-top: 120px;
     background: rgb(var(--color-background-200));
 }
 
