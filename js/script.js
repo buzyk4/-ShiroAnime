@@ -12,3 +12,15 @@ window.addEventListener("scroll", () => {
     lastScrollY = window.scrollY;
 });
 
+/* Mechanisms for searching filters */
+
+const inputList = document.querySelectorAll(".filter-input");
+
+inputList.forEach((input) => {
+    input.addEventListener("focus", () => {
+        input.classList.add("hide-placeHolder");
+    })
+    input.addEventListener("blur", () => {
+        input.classList.remove("hide-placeHolder");
+    })
+});

@@ -2,15 +2,22 @@ body {
     /* Colors */
     --color-text: 92,114,138;
     --color-text-bright: 237,241,245;
+
     --color-background: 237,241,245;
     --color-background-100: 251,251,251;
     --color-background-200: 237,241,245;
+    --color-background-900: 81,97,112;
+
     --color-shadow-blue: 103,132,187;
+    --color-shadow-blue-100: rgb(53, 119, 255);
+
     --color-blue-500: 111,200,255;
+
     --color-gray-400: 201,215,227;
     --color-gray-500: 173,192,210;
     --color-gray-900: 81,97,112;
-    --color-background-900: 81,97,112;
+
+    
 
     /* Measures */
 
@@ -112,7 +119,7 @@ a {
 }
 
 .signUp:hover {
-    box-shadow: 0 2px 15px  #3577ff ;
+    box-shadow: 0 2px 10px  var(--color-shadow-blue-100) ;
     transform: scale(1.02);
 }
 
@@ -173,7 +180,7 @@ a {
     color: #acd5f2;
 }
 
-/* Join-in btn in future card */
+/* Join-in btn in "future card" */
 .join-btn {
     align-items: center;
     background: #3577ff;
@@ -247,6 +254,7 @@ a {
     margin: 40px 0;
     margin-bottom: 25px;
     display: grid;
+    height: 76px;
     grid-gap: 24px;
     grid-template-columns: repeat(5,170px)
 }
@@ -264,7 +272,6 @@ a {
     border-radius: 6px;
     box-shadow: 0 14px 30px rgba(var(--color-shadow-blue),.1),0 4px 4px rgba(var(--color-shadow-blue),.04);
     display: grid;
-    font-family: Helvetica, sans-serif;
     font-size: 1.3rem;
     font-weight: 600;
     height: 38px;
@@ -304,7 +311,8 @@ a {
 
 .value-wrap {
     position: relative;
-    max-height: 14px;
+    max-height: 16px;
+    display:flex;
 }
 
 .placeholder {
@@ -313,8 +321,8 @@ a {
     color: rgb(var(--color-gray-500));
 }
 
-.filter {
-    background: 0 0;
+.filter-input {
+    background: rgb(var(--color-background-100));
     border: none;
     color: rgb(var(--color-gray-700));
     display: inline-block;
@@ -323,22 +331,31 @@ a {
     outline: 0;
     padding: 0;
     width: 100%;
+    height: 16px;
+}
+
+.hide-placeHolder {
+    z-index: 2;
 }
 
 .filters .svg-inline--fa {
     color: rgb(var(--color-gray-400));
     cursor: pointer;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     transition: color .2s ease;
     width: 0.5em;
+}
+
+.filters .svg-inline--fa:hover {
+    color:#bcbedc;
 }
 
 .extra-filters-wrap {
     position: relative;
     font-family:Helvetica, sans-serif;
-    margin: 50px 0;
+    margin: 40px 0;
     margin-bottom: 25px;
-    height: 75px;
+    height: 76px;
 }
 
 .open-btn {
@@ -366,4 +383,8 @@ a {
     vertical-align: -0.125em;
     color: rgb(var(--color-gray-500));
     cursor: pointer;
+}
+
+.open-btn svg:hover{
+    color:#bcbedc;
 }
