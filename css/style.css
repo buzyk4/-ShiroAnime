@@ -6,6 +6,7 @@ body {
     --color-background: 237,241,245;
     --color-background-100: 251,251,251;
     --color-background-200: 237,241,245;
+    --color-background-800: 173,192,210;
     --color-background-900: 81,97,112;
 
     --color-shadow-blue: 103,132,187;
@@ -15,6 +16,8 @@ body {
 
     --color-gray-400: 201,215,227;
     --color-gray-500: 173,192,210;
+    --color-gray-600: 139,160,178;
+    --color-gray-700: 116,136,153;
     --color-gray-900: 81,97,112;
 
     
@@ -127,7 +130,8 @@ a {
     Future card
 */
 .wrap {
-    margin-top: 120px;
+    margin-top: 60px;
+    padding-top: 60px;
     background: rgb(var(--color-background-200));
 }
 
@@ -387,4 +391,69 @@ a {
 
 .open-btn svg:hover{
     color:#bcbedc;
+}
+
+/* Anime landing */
+
+.link {
+    display: flex;
+    align-items: flex-end;
+}
+
+.title {
+    color: rgb(var(--color-gray-900));
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+.title h3 {
+    margin: 0;
+}
+
+.title .expand {
+    color: rgb(var(--color-gray-600));
+    font-size: 1rem;
+    font-weight: 700;
+    margin-left: auto;
+    text-transform: none;
+}
+
+.result {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 185px);
+    justify-content: space-between;
+}
+
+.cover {
+    background: rgba(var(--color-background-300),.8);
+    border-radius: 4px;
+    box-shadow: 0 14px 30px rgba(var(--color-shadow-blue),.15),0 4px 4px rgba(var(--color-shadow-blue),.05);
+    cursor: pointer;
+    display: inline-block;
+    height: 265px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    z-index: 5;
+}
+
+.cover img {
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+}
+
+.result .title {
+    color: rgb(var(--color-gray-700));
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    line-height: 21px;
+    margin-top: 10px;
+    overflow: hidden;
 }
