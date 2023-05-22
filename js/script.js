@@ -21,6 +21,9 @@ inputList.forEach((input) => {
         input.classList.add("hide-placeHolder");
     })
     input.addEventListener("blur", () => {
-        input.classList.remove("hide-placeHolder");
+        input.classList.remove("hide-placeHolder"); // make placeholder invisible
     })
 });
+
+/* Anime landing */
+
