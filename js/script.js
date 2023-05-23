@@ -27,3 +27,17 @@ inputList.forEach((input) => {
 
 /* Anime landing */
 
+
+/* Footer */
+
+const siteTheme = document.querySelector(".theme-button");
+const body = document.querySelector("body")
+
+siteTheme.addEventListener("click", () => {
+
+    if (body.classList != "body-dark-theme") {
+        body.classList.add("body-dark-theme")
+    } else {
+        body.classList.remove("body-dark-theme")
+    }
+})
