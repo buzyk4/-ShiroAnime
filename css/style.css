@@ -55,6 +55,11 @@ body {
     --nav-color: rgb(43, 45, 66);
     --future-card-color: rgb(10, 22, 37);
 
+    --media-text: hsl(344,80%,70%);
+    --media-background: hsl(0,82%,65%);
+    --media-background-text: hsl(344,100%,98%);
+    --media-overlay-text: hsl(344,80%,70%);
+
     /* Measures */
 
     --nav-height: 65px;
@@ -542,9 +547,113 @@ a {
     overflow: hidden;
 }
 
+.cover:hover + .anime-title, .anime-title:hover{
+    color: rgb(var(--color-gray-1200));
+}
+
 .popular {
     margin-bottom: 50px;
 }
+
+/* Top 100 */
+
+.result.table {
+   grid-template-columns: 1fr;
+   grid-gap: 24px; 
+}
+
+.media-card {
+    position:relative;
+    background: rgb(var(--color-background-100));
+    border-radius: 4px;
+    padding: 10px;
+    box-shadow: 0 14px 30px rgba(var(--color-shadow-blue),.15),0 4px 4px rgba(var(--color-shadow-blue),.05);
+    display: inline-grid;
+    grid-template-columns: 48px auto;
+    position: relative;
+    text-align: left;
+    min-height: 80px;
+    margin-left: 80px;
+    height: 60px;
+}
+
+.rank {
+    color: rgb(var(--color-gray-600));
+    display: flex;
+    font-size: 1.4rem;
+    font-weight: 900;
+    height: 50px;
+    left: -70px;
+    line-height: 0;
+    padding: 10px;
+    position: absolute;
+    text-align: left;
+    top: 18px;
+    width: 50px;
+    z-index: 2;
+}
+
+.top-cover {
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+    width: 48px;
+    height: 60px;
+}
+
+.image {
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+}
+
+.content {
+    padding-right: 8px;
+    padding-left: 16px;
+    align-items: center;
+    display: grid;
+    grid-template-columns: minmax(auto,calc(100% - 440px)) 130px 130px 150px;
+    grid-gap: 10px;
+    height: 60px;
+}
+
+.title-wrap {
+    color: rgb(var(--color-gray-900));
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.genres {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    height: 18px;
+    overflow: hidden;
+}
+
+.genre {
+    background: var(--media-background);
+    border-radius: 10px;
+    color: var(--media-background-text);
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    height: 18px;
+    line-height: 1rem;
+    margin-right: 8px;
+    padding: 0 10px;
+    text-transform: lowercase;
+}
+
 
 /* Bottom footer */
 
