@@ -32,24 +32,36 @@ let animeRanking = [
         rating: 97,
         img: "Gintama-Season-4.jpg",
         views: 31385,
+        genres: [
+            "action", "comedy", "drama", "sci-fi"
+        ]
     },
     {
         title: "Fruits Basket The Final Season",
         rating: 96,
         img: "Fruits-Basket-The-Final-Season.jpg",
-        views: 31385
+        views: 31385,
+        genres: [
+            "action", "comedy", "drama", "sci-fi"
+        ]
     },
     {
         title: "Fullmetal Alchemist: Brotherhood",
         rating: 95,
         img: "Fullmetal-Alchemist-Brotherhood.jpg",
-        views: 31385
+        views: 31385,
+        genres: [
+            "action", "adventure", "drama", "fantasy"
+        ]
     },
     {
         title: "Kaguya-sama: Love is War",
         rating: 94,
         img: "Kaguya-sama-Love-is-War.png",
-        views: 31385
+        views: 31385,
+        genres: [
+            "comedy", "psychological", "romance"
+        ]
     },
     {
         title: "Gintama: THE VERY FINAL",
