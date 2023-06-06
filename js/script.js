@@ -34,7 +34,8 @@ let animeRanking = [
         views: 66685,
         genres: [
             "action", "comedy", "drama", "sci-fi"
-        ]
+        ],
+        type: "TV Show"
     },
     {
         title: "Fruits Basket The Final Season",
@@ -43,7 +44,8 @@ let animeRanking = [
         views: 31385,
         genres: [
             "comedy", "drama", "psychological", "romance", 
-        ]
+        ],
+        type: "TV Show"
     },
     {
         title: "Fullmetal Alchemist: Brotherhood",
@@ -52,7 +54,8 @@ let animeRanking = [
         views: 6060,
         genres: [
             "action", "adventure", "drama", "fantasy"
-        ]
+        ],
+        type: "TV Show"
     },
     {
         title: "Kaguya-sama: Love is War",
@@ -61,7 +64,8 @@ let animeRanking = [
         views: 22222,
         genres: [
             "comedy", "psychological", "romance"
-        ]
+        ],
+        type: "TV Show"
     },
     {
         title: "Gintama: THE VERY FINAL",
@@ -70,7 +74,8 @@ let animeRanking = [
         views: 10000,
         genres: [
             "action", "comedy", "drama", "sci-fi"
-        ]
+        ],
+        type: "Movie"
     },
     {
         title: "Attack on Titan Season 3 Part 2",
@@ -79,7 +84,8 @@ let animeRanking = [
         views: 4206,
         genres: [
             "action", "drama", "fantasy", "mystery"
-        ]
+        ],
+        type: "TV Show"
     },
     {
         title: "March comes in like a lion Season 2",
@@ -88,7 +94,8 @@ let animeRanking = [
         views: 2137,
         genres: [
             "drama"
-        ]
+        ],
+        type: "TV Show"
     },
     {
         title: "Hunter x Hunter (2011)",
@@ -97,7 +104,8 @@ let animeRanking = [
         views: 103039,
         genres: [
             "action", "adventure", "fantasy"
-        ]
+        ],
+        type: "TV Show"
     },
     {
         title: "BLEACH: Thousand-Year Blood War",
@@ -106,7 +114,8 @@ let animeRanking = [
         views: 31385,
         genres: [
             "action", "adventure", "supernatural"
-        ]
+        ],
+        type: "TV Show"
     },
     {
         title: "Owarimonogatari Second Season",
@@ -115,7 +124,8 @@ let animeRanking = [
         views: 9999,
         genres: [
             "comedy", "mystery", "psychological", "romance", "supernatural"
-        ]
+        ],
+        type: "TV Show"
     }
     
 ]
@@ -146,6 +156,7 @@ for (let i = 0; i < animeRanking.length; i++) {
     ImageLayout.forEach((l, index) => {
         if (index === i) {
             l.src = "main-page-photos/top-100/" + anime.img;  
+            l.alt = anime.title
         }
     });
 
@@ -166,15 +177,10 @@ for (let i = 0; i < animeRanking.length; i++) {
         if (index === i) {
             l.innerHTML = anime.views + " users";  
         }
-    })
+    });
 
-}
+    /* Genres  */
 
-
-/* Genres  */
-
-for (let i = 0; i < animeRanking.length; i++) {
-    let anime = animeRanking[i];
     let genres = anime.genres
     const genresLayout = document.querySelectorAll(".genres")
 
@@ -182,17 +188,22 @@ for (let i = 0; i < animeRanking.length; i++) {
     genresLayout.forEach((l, index) => {
         if (index === i) { 
 
-            genres.forEach((x) => {
+            genres.forEach((genre) => {
 
                 let anchor = document.createElement("a")
-                anchor.classList.add("genre")
+                anchor.classList.add("genre");
+                anchor.classList.add()
                 l.appendChild(anchor)
-                anchor.textContent = x
+                anchor.textContent = genre
+
+                console.log(anime.title, genre)
             })
         }
     })
 
-}
+
+};
+
 
 
 
