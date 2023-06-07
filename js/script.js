@@ -35,7 +35,10 @@ let animeRanking = [
         genres: [
             "action", "comedy", "drama", "sci-fi"
         ],
-        type: "TV Show"
+        type: "TV Show",
+        length: "51",
+        premiere: "Spring 2015",
+        status: "finished"
     },
     {
         title: "Fruits Basket The Final Season",
@@ -45,7 +48,10 @@ let animeRanking = [
         genres: [
             "comedy", "drama", "psychological", "romance", 
         ],
-        type: "TV Show"
+        type: "TV Show",
+        length: "13",
+        premiere: "Spring 2021",
+        status: "finished"
     },
     {
         title: "Fullmetal Alchemist: Brotherhood",
@@ -55,7 +61,10 @@ let animeRanking = [
         genres: [
             "action", "adventure", "drama", "fantasy"
         ],
-        type: "TV Show"
+        type: "TV Show",
+        length: "64",
+        premiere: "Spring 2009",
+        status: "finished"
     },
     {
         title: "Kaguya-sama: Love is War",
@@ -65,7 +74,10 @@ let animeRanking = [
         genres: [
             "comedy", "psychological", "romance"
         ],
-        type: "TV Show"
+        type: "TV Show",
+        length: "13",
+        premiere: "Spring 2022",
+        status: "finished"
     },
     {
         title: "Gintama: THE VERY FINAL",
@@ -75,7 +87,10 @@ let animeRanking = [
         genres: [
             "action", "comedy", "drama", "sci-fi"
         ],
-        type: "Movie"
+        type: "Movie",
+        length: 1.44,
+        premiere: "Winter 2021",
+        status: "finished"
     },
     {
         title: "Attack on Titan Season 3 Part 2",
@@ -85,7 +100,10 @@ let animeRanking = [
         genres: [
             "action", "drama", "fantasy", "mystery"
         ],
-        type: "TV Show"
+        type: "TV Show",
+        length: "10",
+        premiere: "Winter 2019",
+        status: "finished"
     },
     {
         title: "March comes in like a lion Season 2",
@@ -95,7 +113,10 @@ let animeRanking = [
         genres: [
             "drama"
         ],
-        type: "TV Show"
+        type: "TV Show",
+        length: "22",
+        premiere: "Fall 2017",
+        status: "finished"
     },
     {
         title: "Hunter x Hunter (2011)",
@@ -105,7 +126,10 @@ let animeRanking = [
         genres: [
             "action", "adventure", "fantasy"
         ],
-        type: "TV Show"
+        type: "TV Show",
+        length: "148",
+        premiere: "2011 - 2014",
+        status: "finished"
     },
     {
         title: "BLEACH: Thousand-Year Blood War",
@@ -115,7 +139,10 @@ let animeRanking = [
         genres: [
             "action", "adventure", "supernatural"
         ],
-        type: "TV Show"
+        type: "TV Show",
+        length: "13",
+        premiere: "Fall 2022",
+        status: "finished"
     },
     {
         title: "Owarimonogatari Second Season",
@@ -125,7 +152,10 @@ let animeRanking = [
         genres: [
             "comedy", "mystery", "psychological", "romance", "supernatural"
         ],
-        type: "TV Show"
+        type: "TV Show",
+        length: "7",
+        premiere: "Summer 2017",
+        status: "finished"
     }
     
 ]
@@ -201,6 +231,47 @@ for (let i = 0; i < animeRanking.length; i++) {
         }
     })
 
+
+    /* Format and Status */
+
+    const format = document.querySelectorAll(".format-type");
+    const length = document.querySelectorAll(".length");
+
+    format.forEach((l, index) => {
+        if (index === i) {
+            l.innerHTML = anime.type;
+        }
+    });
+
+    length.forEach((l, index) => {
+        if  (index === i) {
+            if (typeof anime.length === "number") {
+                let lengthString = anime.length.toString();
+                let lengthArray = lengthString.split(".");
+
+                l.innerHTML = lengthArray[0] + " hour " + lengthArray[1] + " mins"
+
+            } else {
+                l.innerHTML = anime.length + " episodes";
+            }
+        }
+    })
+
+    const releaseDate = document.querySelectorAll(".release-date");
+    const status = document.querySelectorAll(".status");
+
+    releaseDate.forEach((l, index) => {
+        if (index === i) {
+            l.innerHTML = anime.premiere;
+        }
+    });
+
+    status.forEach((l, index) => {
+        if (index === i) {
+            l.style.textTransform = "capitalize"
+            l.innerHTML = anime.status
+        }
+    })
 
 };
 
