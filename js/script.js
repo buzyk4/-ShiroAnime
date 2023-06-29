@@ -18,10 +18,11 @@ const inputList = document.querySelectorAll(".filter-input");
 
 inputList.forEach((input) => {
     input.addEventListener("focus", () => {
-        input.classList.add("hide-placeHolder");
+        input.classList.add("hide-placeHolder");  // make placeholder invisible
     })
     input.addEventListener("blur", () => {
-        input.classList.remove("hide-placeHolder"); // make placeholder invisible
+        input.classList.remove("hide-placeHolder");
+        input.value = ""
     })
 });
 
@@ -221,12 +222,12 @@ for (let i = 0; i < animeRanking.length; i++) {
             genres.forEach((genre) => {
 
                 let anchor = document.createElement("a")
+                
                 anchor.classList.add("genre");
                 anchor.classList.add()
+
                 l.appendChild(anchor)
                 anchor.textContent = genre
-
-                console.log(anime.title, genre)
             })
         }
     })
