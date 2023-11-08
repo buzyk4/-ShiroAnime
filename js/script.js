@@ -12,6 +12,10 @@ window.addEventListener("scroll", () => {
     lastScrollY = window.scrollY;
 });
 
+/* Login/SingUp landing */
+
+
+
 /* Mechanisms for searching filters */
 
 const inputList = document.querySelectorAll(".filter-input");
