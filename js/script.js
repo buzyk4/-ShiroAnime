@@ -14,6 +14,31 @@ window.addEventListener("scroll", () => {
 
 /* Login/SingUp landing */
 
+const logLanding = document.querySelector(".log-container");
+const logBtn = document.querySelector(".login");
+const signUpBtn = document.querySelector(".signUp");
+const exitBtn = document.querySelector(".exit");
+
+logBtn.addEventListener("click", () => {
+
+    if (logLanding.style.zIndex = "-1") {
+        logLanding.style.zIndex = "100"
+    }
+});
+
+signUpBtn.addEventListener("click", () => {
+
+    if (logLanding.style.zIndex = "-1") {
+        logLanding.style.zIndex = "100"
+    }
+});
+
+exitBtn.addEventListener("click", () => {
+
+    if (logLanding.style.zIndex = "100") {
+        logLanding.style.zIndex = "-1"
+    }
+});
 
 
 /* Mechanisms for searching filters */
@@ -291,9 +316,9 @@ const body = document.querySelector("body")
 
 siteTheme.addEventListener("click", () => {
 
-    if (body.classList != "body-dark-theme") {
-        body.classList.add("body-dark-theme")
-    } else {
+    if (body.classList.contains("body-dark-theme")) {
         body.classList.remove("body-dark-theme")
+    } else {
+        body.classList.add("body-dark-theme")
     }
 })
