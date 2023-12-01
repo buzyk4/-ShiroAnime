@@ -1,0 +1,9 @@
+.filters {
+  display: flex;
+}
+.second-filter {
+  display: none;
+}
+.search-filter {
+  width: 95%;
+}
