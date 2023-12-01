@@ -14,39 +14,44 @@ window.addEventListener("scroll", () => {
 
 /* Login/SingUp landing */
 
-const logLanding = document.querySelector(".log-container");
+const logLanding = document.getElementById("log-container");
+const logCard = document.getElementById("log-card");
 const logBtn = document.querySelector(".login");
 const signUpBtn = document.querySelector(".signUp");
 const exitBtn = document.querySelector(".exit");
-const logCard = document.querySelector(".log-card-invisb");
+
+function switchVisible() {
+  if (
+    (logLanding.classList = ".log-container-invisb") &&
+    (logCard.classList = ".log-card-invisb")
+  ) {
+    logLanding.classList.toggle(".log-container-invisb");
+    logCard.classList.toggle(".log-card-invisb");
+
+    logLanding.classList.toggle("log-container");
+    logCard.classList.toggle("log-card");
+  }
+}
 
 logBtn.addEventListener("click", () => {
-  if ((logLanding.style.zIndex = "-1")) {
-    logLanding.style.zIndex = "100";
-    if ((logCard.classList = ".log-card-invisib")) {
-      logCard.classList.remove(".log-card-invisib");
-      logCard.classList.toggle("log-card");
-    }
-  }
+  (logLanding.classList = ".log-container-invisb")
+    ? switchVisible()
+    : undefined;
 });
 
 signUpBtn.addEventListener("click", () => {
-  if ((logLanding.style.zIndex = "-1")) {
-    logLanding.style.zIndex = "100";
-    if ((logCard.classList = ".log-card-invisib")) {
-      logCard.classList.remove(".log-card-invisib");
-      logCard.classList.toggle("log-card");
-    }
-  }
+  (logLanding.classList = ".log-container-invisb")
+    ? switchVisible()
+    : undefined;
 });
 
 exitBtn.addEventListener("click", () => {
-  if ((logLanding.style.zIndex = "100")) {
-    logLanding.style.zIndex = "-1";
-    if ((logCard.classList = ".log-card-invisib")) {
-      logCard.classList.remove("log-card");
-      logCard.classList.toggle("log-card-invisib");
-    }
+  if ((logLanding.classList = ".log-container")) {
+    logLanding.classList.remove(".log-container");
+    logCard.classList.remove("log-card");
+
+    logLanding.classList.add("log-container-invisb");
+    logCard.classList.add("log-card-invisb");
   }
 });
 
