@@ -1,609 +1,975 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <title>Shiro</title>
-        <script src="js/script.js" async></script>
-        <link rel="stylesheet" href="css/style.css" />
-        <link rel="stylesheet" href="css/mobile.css"  media="screen and (max-width: 1040px)">
-    </head>
-    <body class="body">
-        <div id="log-container" class="log-container-invisb">
-            <div id="log-card" class="log-card-invisb">
-                <a class="exit">EXIT</a>
-            </div>
+    <title>Shiro</title>
+    <script src="js/script.js" async></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="css/mobile.css"
+      media="screen and (max-width: 1040px)"
+    />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  </head>
+  <body class="body">
+    <div id="log-container" class="log-container-invisb">
+      <div id="log-card" class="log-card-invisb">
+        <div class="form-container">
+          <!--Login Form-->
+          <div class="form login-form">
+            <form action="#">
+              <h2>Login</h2>
+              <div class="input-box">
+                <input type="email" placeholder="Enter your email" required>
+                <i class="uil uil-envelope-alt email"></i>
+              </div>
+              <div class="input-box">
+                <input type="password" placeholder="Enter your password" required>
+                <i class="uil uil-lock password"></i>
+                <i class="uil uil-eye-slash pw-hide"></i>
+              </div>
+              <div class="option-field">
+                <span class="checkbox">
+                  <input type="checkbox" id="check">
+                  <label for="check">Remember me</label>
+                </span>
+                <a href="#" class="forgot-pw">Forgot password?</a>
+              </div>
+              <button class="log-btn">Login Now</button>
+            </form>
+          </div>
+          <!--Signup Form-->
+          <div class="form signup-form">
+            <form action="#">
+              <h2>Signup</h2>
+              <div class="input-box">
+                <input type="email" placeholder="Enter your email" required>
+                <i class="uil uil-envelope-alt email"></i>
+              </div>
+              <div class="input-box">
+                <input type="password" placeholder="Create password" required>
+                <i class="uil uil-lock password"></i>
+                <i class="uil uil-eye-slash pw-hide"></i>
+              </div>
+              <button class="log-btn singup-btn">Signup Now</button>
+            </form>
+          </div>
+          <a class="exit">Exit</a>
         </div>
-        <header>
-            <nav class="top-nav">
-                <div class="nav-wrap">
-                    <a href="index.html" class="logo">
-                        <img alt="logo" src="main-page-photos/logo.png">
-                    </a>
-                    <div class="nav-links">
-                        <span class="browse-wrap">
-                            <a href="#search-section">Search</a>
-                        </span>
-                        <a href="" class="link">Social</a>
-                        <a href="" class="link">Forum</a>
-                        <a class="link login">Login</a>
-                        <a class="link signUp">Sing Up</a> 
-                    </div>
-                </div>
-            </nav>
-        </header>
-        <main class="wrap">
-            <div class="landing">
-                <h1 class="heading">The next-generation anime platform</h1>
-                <h2 class="sub-heading">Discover and track your favorite anime and manga with Shiro</h2>
-                <div class="feature-cards">
-                    <div class="feature-card">
-                        <div class="icon">
-                            <img alt="map" src="main-page-photos/icon.svg">
-                        </div>
-                        <div>
-                            <h3>Discover your taste</h3>
-                            <span> 
-                                What are your highest rated genres or most
-                                watched voice actors? Follow your watching
-                                habits over time with in-depth statistics. 
-                            </span>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="icon">
-                            <img alt="phone" src="main-page-photos/phone-icon.svg">
-                        </div>
-                        <div>
-                            <h3>Bring Shiro anywhere</h3>
-                            <span> 
-                                Keep track of your progress on-the-go with
-                                one of many Shiro apps across Windows, Android,
-                                IOS and macOS.
-                            </span>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="icon">
-                            <img alt="chat" src="main-page-photos/social-icon.svg">
-                        </div>
-                        <div>
-                            <h3>Join the conversation</h3>
-                            <span> 
-                                Share your thoughts with our thriving
-                                community, make friends, socialize, and
-                                receive recommendations. 
-                            </span>
-                        </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="icon">
-                            <img alt="style" src="main-page-photos/custom-icon.svg">
-                        </div>
-                        <div>
-                            <h3>Tweak it to your liking</h3>
-                            <span> 
-                                Customize your scoring system, title format,
-                                color scheme, and much more! Also, we have
-                                a dark mode.
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <a class="join-btn">
-                    <div class="label" >Join Now</div>
-                    <div class="circle">
-                        <svg data-v-3428d21c="" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-chevron-right fa-w-10">
-                            <path data-v-3428d21c="" fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z" class=""></path>
-                        </svg>
-                    </div>
-                </a>
+      </div>
+    </div>
+    <header>
+      <nav class="top-nav">
+        <div class="nav-wrap">
+          <a href="index.html" class="logo">
+            <img alt="logo" src="main-page-photos/logo.png" />
+          </a>
+          <div class="nav-links">
+            <span class="browse-wrap">
+              <a href="#search-section">Search</a>
+            </span>
+            <a href="" class="link">Social</a>
+            <a href="" class="link">Forum</a>
+            <a class="link login">Login</a>
+            <a class="link signUp">Sing Up</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="wrap">
+      <div class="landing">
+        <h1 class="heading">The next-generation anime platform</h1>
+        <h2 class="sub-heading">
+          Discover and track your favorite anime and manga with Shiro
+        </h2>
+        <div class="feature-cards">
+          <div class="feature-card">
+            <div class="icon">
+              <img alt="map" src="main-page-photos/icon.svg" />
             </div>
-            <div class="search" id="search-section">
-                <div class="container">
-                    <div class="filters-wrap primary-filters">
-                        <div class="filters">
-                            <div id="search-filter" class="filter filter-select search-filter" >
-                                <div class="name">Search</div>
-                                <div class="search-wrap">
-                                    <svg data-v-84c4e64c="" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon left svg-inline--fa fa-search fa-w-16"><path data-v-84c4e64c="" fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" class=""></path></svg>
-                                    <input type="search" class="search-input">
-                                </div>
-                            </div>
-                            <div class="filter filter-select second-filter">
-                                <div class="name">Genres</div>
-                                <div class="select">
-                                    <div class="value-wrap">
-                                        <div class="placeholder">Any</div>
-                                        <input type="search" class="filter-input">
-                                    </div>
-                                    <svg data-v-e3e1e202="" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon svg-inline--fa fa-chevron-down fa-w-14 fa-fw"><path data-v-e3e1e202="" fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z" class=""></path></svg>
-                                </div>
-                            </div>
-                            <div class="filter filter-select second-filter">
-                                <div class="name">Year</div>
-                                <div class="select">
-                                    <div class="value-wrap">
-                                        <div class="placeholder">Any</div>
-                                        <input type="search" class="filter-input">
-                                    </div>
-                                    <svg data-v-e3e1e202="" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon svg-inline--fa fa-chevron-down fa-w-14 fa-fw"><path data-v-e3e1e202="" fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z" class=""></path></svg>
-                                </div>
-                            </div>
-                            <div class="filter filter-select second-filter">
-                                <div class="name">Season</div>
-                                <div class="select">
-                                    <div class="value-wrap">
-                                        <div class="placeholder">Any</div>
-                                        <input type="search" class="filter-input">
-                                    </div>
-                                    <svg data-v-e3e1e202="" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon svg-inline--fa fa-chevron-down fa-w-14 fa-fw"><path data-v-e3e1e202="" fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z" class=""></path></svg>
-                                </div>
-                            </div>
-                            <div class="filter filter-select second-filter">
-                                <div class="name">Format</div>
-                                <div class="select">
-                                    <div class="value-wrap">
-                                        <div class="placeholder">Any</div>
-                                        <input type="search" class="filter-input">
-                                    </div>
-                                    <svg data-v-e3e1e202="" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon svg-inline--fa fa-chevron-down fa-w-14 fa-fw"><path data-v-e3e1e202="" fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z" class=""></path></svg>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="extra-filters-wrap">
-                            <div class="open-btn">
-                                <svg data-v-acf5fe42="" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sliders-h" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon svg-inline--fa fa-sliders-h fa-w-16"><path data-v-acf5fe42="" fill="currentColor" d="M496 384H160v-16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v16H16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h80v16c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16v-16h336c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zm0-160h-80v-16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v16H16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h336v16c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16v-16h80c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zm0-160H288V48c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v16H16C7.2 64 0 71.2 0 80v32c0 8.8 7.2 16 16 16h208v16c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16v-16h208c8.8 0 16-7.2 16-16V80c0-8.8-7.2-16-16-16z" class=""></path></svg>
-                            </div>
-                        </div>
-                    </div>
-                    <div></div>
-                    <div class="search-landing ">
-                        <div class="trending">
-                            <a class="title all-link">
-                                <h3>Trending now</h3>
-                                <div class="expand">View All</div>
-                            </a>
-                            <div class="result">
-                                <div>
-                                    <a href="" class="cover">
-                                        <img  alt="Demon Slayer: Kimetsu no Yaiba" src="main-page-photos/demonslayer-01.png">
-                                    </a>
-                                    <a href=""  class="anime-title title">
-                                        Demon Slayer: Kimetsu no Yaiba
-                                    </a>
-                                </div>
-                                <div>
-                                    <a href="" class="cover">
-                                        <img  class="" alt="Hell's Paradise" src="main-page-photos/hells-paradise-01.jpg">
-                                    </a>
-                                    <a href=""  class="anime-title title">
-                                        Hell's Paradise
-                                    </a>
-                                </div>
-                                <div>
-                                    <a href="" class="cover">
-                                        <img  alt="One Piece" src="main-page-photos/one-piece-01.jpg">
-                                    </a>
-                                    <a href="" class="anime-title title">
-                                        One Piece
-                                    </a>
-                                </div>
-                                <div>
-                                    <a href="" class="cover">
-                                        <img alt="Tengoku Daimakyo" src="main-page-photos/Tengoku-Daimakyo-01.jpg">
-                                    </a>
-                                    <a href="" class="anime-title title">
-                                        Tengoku Daimakyo
-                                    </a>
-                                </div>
-                                <div>
-                                    <a href="" class="cover">
-                                        <img alt="My Home Hero" src="main-page-photos/My-Home-Hero-01.png">
-                                    </a>
-                                    <a href="" class="anime-title title">
-                                        My Home Hero
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="popular">
-                            <a class="title all-link">
-                                <h3>Trending now</h3>
-                                <div class="expand">View All</div>
-                            </a>
-                            <div class="result">
-                                <div>
-                                    <a href="" class="cover">
-                                        <img alt="Dead Mount Death Play" src="main-page-photos/Dead-Mount-Death-Play-01.jpg">
-                                    </a>
-                                    <a href="" class="anime-title title">
-                                        Dead Mount Death Play
-                                    </a>
-                                </div>
-                                <div>
-                                    <a href="" class="cover">
-                                        <img alt="Dr. STONE New World" src="main-page-photos/Dr. STONE-New-World-01.jpg">
-                                    </a>
-                                    <a href="" class="anime-title title">
-                                        Dr. STONE New World
-                                    </a>
-                                </div>
-                                <div>
-                                    <a href="" class="cover">
-                                        <img  alt="Oshi No Ko" src="main-page-photos/Oshi-No-Ko-01.png">
-                                    </a>
-                                    <a href="" class="anime-title title">
-                                        Oshi No Ko
-
-                                    </a>
-                                </div>
-                                <div>
-                                    <a href="" class="cover">
-                                        <img alt="MASHLE: MAGIC AND MUSCLES" src="main-page-photos/MASHLE-MAGIC-AND-MUSCLES-01.png">
-                                    </a>
-                                    <a href="" class="anime-title title">
-                                        MASHLE: MAGIC AND MUSCLES
-                                    </a>
-                                </div>
-                                <div>
-                                    <a href="" class="cover">
-                                        <img alt="Vinland Saga Season 2" src="main-page-photos/Vinland-Saga-Season-2-01.jpg">
-                                    </a>
-                                    <a href="" class="anime-title title">
-                                        Vinland Saga Season 2
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="Top-anime">
-                            <a class="title all-link">
-                                <h3>Top 100 Anime</h3>
-                                <div class="expand">View All</div>
-                            </a>
-                        <div class="result table">
-                            <div class="media-card has-rank">
-                                <div class="rank circle">
-                                    <span>#</span>
-                                    1
-                                </div>
-                                <a class="top-cover"><img class="image loaded" src=""></a>
-                                <div class="content">
-                                    <div class="row">
-                                        <div class="title-wrap">
-                                            <a class="title-link ellipsis"></a>
-                                        </div>
-                                        <div class="genres">
-                                        </div>
-                                    </div>
-                                    <div class="row score">
-                                        <svg data-v-70df6e62="" aria-hidden="true" focusable="false" data-prefix="far" data-icon="smile" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" color="rgb(var(--color-green))" class="icon svg-inline--fa fa-smile fa-w-16 fa-fw">
-                                            <path data-v-70df6e62="" fill="currentColor" d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 448c-110.3 0-200-89.7-200-200S137.7 56 248 56s200 89.7 200 200-89.7 200-200 200zm-80-216c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm160 0c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm4 72.6c-20.8 25-51.5 39.4-84 39.4s-63.2-14.3-84-39.4c-8.5-10.2-23.7-11.5-33.8-3.1-10.2 8.5-11.5 23.6-3.1 33.8 30 36 74.1 56.6 120.9 56.6s90.9-20.6 120.9-56.6c8.5-10.2 7.1-25.3-3.1-33.8-10.1-8.4-25.3-7.1-33.8 3.1z" class=""></path>
-                                        </svg>
-                                        <div class="percentage">
-                                            <span class="percentage-score"></span>
-                                            <div class="sup-row popularity"></div>
-                                        </div>
-                                    </div>
-                                    <div class="row format">
-                                        <span class="format-type"></span>
-                                        <div class="sup-row length"></div>
-                                    </div>
-                                    <div class="row date">
-                                        <span class="release-date"></span>
-                                        <div class="sup-row status"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="media-card has-rank">
-                                <div class="rank circle">
-                                    <span>#</span>
-                                    2
-                                </div>
-                                <a class="top-cover"><img class="image loaded" src="main-page-photos/top-100/Gintama-THE-VERY-FINAL.jpg"></a>
-                                <div class="content">
-                                    <div class="row">
-                                        <div class="title-wrap">
-                                            <a class="title-link ellipsis"></a>
-                                        </div>
-                                        <div class="genres">
-                                        </div>
-                                    </div>
-                                    <div class="row score">
-                                        <svg data-v-70df6e62="" aria-hidden="true" focusable="false" data-prefix="far" data-icon="smile" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" color="rgb(var(--color-green))" class="icon svg-inline--fa fa-smile fa-w-16 fa-fw">
-                                            <path data-v-70df6e62="" fill="currentColor" d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 448c-110.3 0-200-89.7-200-200S137.7 56 248 56s200 89.7 200 200-89.7 200-200 200zm-80-216c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm160 0c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm4 72.6c-20.8 25-51.5 39.4-84 39.4s-63.2-14.3-84-39.4c-8.5-10.2-23.7-11.5-33.8-3.1-10.2 8.5-11.5 23.6-3.1 33.8 30 36 74.1 56.6 120.9 56.6s90.9-20.6 120.9-56.6c8.5-10.2 7.1-25.3-3.1-33.8-10.1-8.4-25.3-7.1-33.8 3.1z" class=""></path>
-                                        </svg>
-                                        <div class="percentage">
-                                            <span class="percentage-score"></span>
-                                            <div class="sup-row popularity"></div>
-                                        </div>
-                                    </div>
-                                    <div class="row format">
-                                        <span class="format-type"></span>
-                                        <div class="sup-row length"></div>
-                                    </div>
-                                    <div class="row date">
-                                        <span class="release-date"></span>
-                                        <div class="sup-row status"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="media-card has-rank">
-                                <div class="rank circle">
-                                    <span>#</span>
-                                    3
-                                </div>
-                                <a class="top-cover"><img class="image loaded" src="main-page-photos/top-100/Gintama-THE-VERY-FINAL.jpg"></a>
-                                <div class="content">
-                                    <div class="row">
-                                        <div class="title-wrap">
-                                            <a class="title-link ellipsis"></a>
-                                        </div>
-                                        <div class="genres">
-                                        </div>
-                                    </div>
-                                    <div class="row score">
-                                        <svg data-v-70df6e62="" aria-hidden="true" focusable="false" data-prefix="far" data-icon="smile" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" color="rgb(var(--color-green))" class="icon svg-inline--fa fa-smile fa-w-16 fa-fw">
-                                            <path data-v-70df6e62="" fill="currentColor" d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 448c-110.3 0-200-89.7-200-200S137.7 56 248 56s200 89.7 200 200-89.7 200-200 200zm-80-216c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm160 0c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm4 72.6c-20.8 25-51.5 39.4-84 39.4s-63.2-14.3-84-39.4c-8.5-10.2-23.7-11.5-33.8-3.1-10.2 8.5-11.5 23.6-3.1 33.8 30 36 74.1 56.6 120.9 56.6s90.9-20.6 120.9-56.6c8.5-10.2 7.1-25.3-3.1-33.8-10.1-8.4-25.3-7.1-33.8 3.1z" class=""></path>
-                                        </svg>
-                                        <div class="percentage">
-                                            <span class="percentage-score"></span>
-                                            <div class="sup-row popularity"></div>
-                                        </div>
-                                    </div>
-                                    <div class="row format">
-                                        <span class="format-type"></span>
-                                        <div class="sup-row length"></div>
-                                    </div>
-                                    <div class="row date">
-                                        <span class="release-date"></span>
-                                        <div class="sup-row status"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="media-card has-rank">
-                                <div class="rank circle">
-                                    <span>#</span>
-                                    4
-                                </div>
-                                <a class="top-cover"><img class="image loaded" src="main-page-photos/top-100/Gintama-THE-VERY-FINAL.jpg"></a>
-                                <div class="content">
-                                    <div class="row">
-                                        <div class="title-wrap">
-                                            <a class="title-link ellipsis"></a>
-                                        </div>
-                                        <div class="genres">
-                                        </div>
-                                    </div>
-                                    <div class="row score">
-                                        <svg data-v-70df6e62="" aria-hidden="true" focusable="false" data-prefix="far" data-icon="smile" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" color="rgb(var(--color-green))" class="icon svg-inline--fa fa-smile fa-w-16 fa-fw">
-                                            <path data-v-70df6e62="" fill="currentColor" d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 448c-110.3 0-200-89.7-200-200S137.7 56 248 56s200 89.7 200 200-89.7 200-200 200zm-80-216c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm160 0c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm4 72.6c-20.8 25-51.5 39.4-84 39.4s-63.2-14.3-84-39.4c-8.5-10.2-23.7-11.5-33.8-3.1-10.2 8.5-11.5 23.6-3.1 33.8 30 36 74.1 56.6 120.9 56.6s90.9-20.6 120.9-56.6c8.5-10.2 7.1-25.3-3.1-33.8-10.1-8.4-25.3-7.1-33.8 3.1z" class=""></path>
-                                        </svg>
-                                        <div class="percentage">
-                                            <span class="percentage-score"></span>
-                                            <div class="sup-row popularity"></div>
-                                        </div>
-                                    </div>
-                                    <div class="row format">
-                                        <span class="format-type"></span>
-                                        <div class="sup-row length"></div>
-                                    </div>
-                                    <div class="row date">
-                                        <span class="release-date"></span>
-                                        <div class="sup-row status"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="media-card has-rank">
-                                <div class="rank circle">
-                                    <span>#</span>
-                                    5
-                                </div>
-                                <a class="top-cover"><img class="image loaded" src="main-page-photos/top-100/Gintama-THE-VERY-FINAL.jpg"></a>
-                                <div class="content">
-                                    <div class="row">
-                                        <div class="title-wrap">
-                                            <a class="title-link ellipsis"></a>
-                                        </div>
-                                        <div class="genres">
-                                        </div>
-                                    </div>
-                                    <div class="row score">
-                                        <svg data-v-70df6e62="" aria-hidden="true" focusable="false" data-prefix="far" data-icon="smile" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" color="rgb(var(--color-green))" class="icon svg-inline--fa fa-smile fa-w-16 fa-fw">
-                                            <path data-v-70df6e62="" fill="currentColor" d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 448c-110.3 0-200-89.7-200-200S137.7 56 248 56s200 89.7 200 200-89.7 200-200 200zm-80-216c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm160 0c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm4 72.6c-20.8 25-51.5 39.4-84 39.4s-63.2-14.3-84-39.4c-8.5-10.2-23.7-11.5-33.8-3.1-10.2 8.5-11.5 23.6-3.1 33.8 30 36 74.1 56.6 120.9 56.6s90.9-20.6 120.9-56.6c8.5-10.2 7.1-25.3-3.1-33.8-10.1-8.4-25.3-7.1-33.8 3.1z" class=""></path>
-                                        </svg>
-                                        <div class="percentage">
-                                            <span class="percentage-score"></span>
-                                            <div class="sup-row popularity"></div>
-                                        </div>
-                                    </div>
-                                    <div class="row format">
-                                        <span class="format-type"></span>
-                                        <div class="sup-row length"></div>
-                                    </div>
-                                    <div class="row date">
-                                        <span class="release-date"></span>
-                                        <div class="sup-row status"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="media-card has-rank">
-                                <div class="rank circle">
-                                    <span>#</span>
-                                    6
-                                </div>
-                                <a class="top-cover"><img class="image loaded" src="main-page-photos/top-100/Gintama-THE-VERY-FINAL.jpg"></a>
-                                <div class="content">
-                                    <div class="row">
-                                        <div class="title-wrap">
-                                            <a class="title-link ellipsis"></a>
-                                        </div>
-                                        <div class="genres">
-                                        </div>
-                                    </div>
-                                    <div class="row score">
-                                        <svg data-v-70df6e62="" aria-hidden="true" focusable="false" data-prefix="far" data-icon="smile" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" color="rgb(var(--color-green))" class="icon svg-inline--fa fa-smile fa-w-16 fa-fw">
-                                            <path data-v-70df6e62="" fill="currentColor" d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 448c-110.3 0-200-89.7-200-200S137.7 56 248 56s200 89.7 200 200-89.7 200-200 200zm-80-216c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm160 0c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm4 72.6c-20.8 25-51.5 39.4-84 39.4s-63.2-14.3-84-39.4c-8.5-10.2-23.7-11.5-33.8-3.1-10.2 8.5-11.5 23.6-3.1 33.8 30 36 74.1 56.6 120.9 56.6s90.9-20.6 120.9-56.6c8.5-10.2 7.1-25.3-3.1-33.8-10.1-8.4-25.3-7.1-33.8 3.1z" class=""></path>
-                                        </svg>
-                                        <div class="percentage">
-                                            <span class="percentage-score"></span>
-                                            <div class="sup-row popularity"></div>
-                                        </div>
-                                    </div>
-                                    <div class="row format">
-                                        <span class="format-type"></span>
-                                        <div class="sup-row length"></div>
-                                    </div>
-                                    <div class="row date">
-                                        <span class="release-date"></span>
-                                        <div class="sup-row status"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="media-card has-rank">
-                                <div class="rank circle">
-                                    <span>#</span>
-                                    7
-                                </div>
-                                <a class="top-cover"><img class="image loaded" src="main-page-photos/top-100/Gintama-THE-VERY-FINAL.jpg"></a>
-                                <div class="content">
-                                    <div class="row">
-                                        <div class="title-wrap">
-                                            <a class="title-link ellipsis"></a>
-                                        </div>
-                                        <div class="genres">
-                                        </div>
-                                    </div>
-                                    <div class="row score">
-                                        <svg data-v-70df6e62="" aria-hidden="true" focusable="false" data-prefix="far" data-icon="smile" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" color="rgb(var(--color-green))" class="icon svg-inline--fa fa-smile fa-w-16 fa-fw">
-                                            <path data-v-70df6e62="" fill="currentColor" d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 448c-110.3 0-200-89.7-200-200S137.7 56 248 56s200 89.7 200 200-89.7 200-200 200zm-80-216c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm160 0c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm4 72.6c-20.8 25-51.5 39.4-84 39.4s-63.2-14.3-84-39.4c-8.5-10.2-23.7-11.5-33.8-3.1-10.2 8.5-11.5 23.6-3.1 33.8 30 36 74.1 56.6 120.9 56.6s90.9-20.6 120.9-56.6c8.5-10.2 7.1-25.3-3.1-33.8-10.1-8.4-25.3-7.1-33.8 3.1z" class=""></path>
-                                        </svg>
-                                        <div class="percentage">
-                                            <span class="percentage-score"></span>
-                                            <div class="sup-row popularity"></div>
-                                        </div>
-                                    </div>
-                                    <div class="row format">
-                                        <span class="format-type"></span>
-                                        <div class="sup-row length"></div>
-                                    </div>
-                                    <div class="row date">
-                                        <span class="release-date"></span>
-                                        <div class="sup-row status"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="media-card has-rank">
-                                <div class="rank circle">
-                                    <span>#</span>
-                                    8
-                                </div>
-                                <a class="top-cover"><img class="image loaded" src="main-page-photos/top-100/Gintama-THE-VERY-FINAL.jpg"></a>
-                                <div class="content">
-                                    <div class="row">
-                                        <div class="title-wrap">
-                                            <a class="title-link ellipsis"></a>
-                                        </div>
-                                        <div class="genres">
-                                        </div>
-                                    </div>
-                                    <div class="row score">
-                                        <svg data-v-70df6e62="" aria-hidden="true" focusable="false" data-prefix="far" data-icon="smile" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" color="rgb(var(--color-green))" class="icon svg-inline--fa fa-smile fa-w-16 fa-fw">
-                                            <path data-v-70df6e62="" fill="currentColor" d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 448c-110.3 0-200-89.7-200-200S137.7 56 248 56s200 89.7 200 200-89.7 200-200 200zm-80-216c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm160 0c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm4 72.6c-20.8 25-51.5 39.4-84 39.4s-63.2-14.3-84-39.4c-8.5-10.2-23.7-11.5-33.8-3.1-10.2 8.5-11.5 23.6-3.1 33.8 30 36 74.1 56.6 120.9 56.6s90.9-20.6 120.9-56.6c8.5-10.2 7.1-25.3-3.1-33.8-10.1-8.4-25.3-7.1-33.8 3.1z" class=""></path>
-                                        </svg>
-                                        <div class="percentage">
-                                            <span class="percentage-score"></span>
-                                            <div class="sup-row popularity"></div>
-                                        </div>
-                                    </div>
-                                    <div class="row format">
-                                        <span class="format-type"></span>
-                                        <div class="sup-row length"></div>
-                                    </div>
-                                    <div class="row date">
-                                        <span class="release-date"></span>
-                                        <div class="sup-row status"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="media-card has-rank">
-                                <div class="rank circle">
-                                    <span>#</span>
-                                    9
-                                </div>
-                                <a class="top-cover"><img class="image loaded" src="main-page-photos/top-100/Gintama-THE-VERY-FINAL.jpg"></a>
-                                <div class="content">
-                                    <div class="row">
-                                        <div class="title-wrap">
-                                            <a class="title-link ellipsis"></a>
-                                        </div>
-                                        <div class="genres">
-
-                                        </div>
-                                    </div>
-                                    <div class="row score">
-                                        <svg data-v-70df6e62="" aria-hidden="true" focusable="false" data-prefix="far" data-icon="smile" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" color="rgb(var(--color-green))" class="icon svg-inline--fa fa-smile fa-w-16 fa-fw">
-                                            <path data-v-70df6e62="" fill="currentColor" d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 448c-110.3 0-200-89.7-200-200S137.7 56 248 56s200 89.7 200 200-89.7 200-200 200zm-80-216c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm160 0c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm4 72.6c-20.8 25-51.5 39.4-84 39.4s-63.2-14.3-84-39.4c-8.5-10.2-23.7-11.5-33.8-3.1-10.2 8.5-11.5 23.6-3.1 33.8 30 36 74.1 56.6 120.9 56.6s90.9-20.6 120.9-56.6c8.5-10.2 7.1-25.3-3.1-33.8-10.1-8.4-25.3-7.1-33.8 3.1z" class=""></path>
-                                        </svg>
-                                        <div class="percentage">
-                                            <span class="percentage-score"></span>
-                                            <div class="sup-row popularity"></div>
-                                        </div>
-                                    </div>
-                                    <div class="row format">
-                                        <span class="format-type"></span>
-                                        <div class="sup-row length"></div>
-                                    </div>
-                                    <div class="row date">
-                                        <span class="release-date"></span>
-                                        <div class="sup-row status"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="media-card has-rank">
-                                <div class="rank circle">
-                                    <span>#</span>
-                                    10
-                                </div>
-                                <a class="top-cover"><img class="image loaded" src="main-page-photos/top-100/Gintama-THE-VERY-FINAL.jpg"></a>
-                                <div class="content">
-                                    <div class="row">
-                                        <div class="title-wrap">
-                                            <a class="title-link ellipsis"></a>
-                                        </div>
-                                        <div class="genres">
-
-                                        </div>
-                                    </div>
-                                    <div class="row score">
-                                        <svg data-v-70df6e62="" aria-hidden="true" focusable="false" data-prefix="far" data-icon="smile" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" color="rgb(var(--color-green))" class="icon svg-inline--fa fa-smile fa-w-16 fa-fw">
-                                            <path data-v-70df6e62="" fill="currentColor" d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 448c-110.3 0-200-89.7-200-200S137.7 56 248 56s200 89.7 200 200-89.7 200-200 200zm-80-216c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm160 0c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm4 72.6c-20.8 25-51.5 39.4-84 39.4s-63.2-14.3-84-39.4c-8.5-10.2-23.7-11.5-33.8-3.1-10.2 8.5-11.5 23.6-3.1 33.8 30 36 74.1 56.6 120.9 56.6s90.9-20.6 120.9-56.6c8.5-10.2 7.1-25.3-3.1-33.8-10.1-8.4-25.3-7.1-33.8 3.1z" class=""></path>
-                                        </svg>
-                                        <div class="percentage">
-                                            <span class="percentage-score"></span>
-                                            <div class="sup-row popularity"></div>
-                                        </div>
-                                    </div>
-                                    <div class="row format">
-                                        <span class="format-type"></span>
-                                        <div class="sup-row length"></div>
-                                    </div>
-                                    <div class="row date">
-                                        <span class="release-date"></span>
-                                        <div class="sup-row status"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div>
+              <h3>Discover your taste</h3>
+              <span>
+                What are your highest rated genres or most watched voice actors?
+                Follow your watching habits over time with in-depth statistics.
+              </span>
             </div>
-        </main>
+          </div>
+          <div class="feature-card">
+            <div class="icon">
+              <img alt="phone" src="main-page-photos/phone-icon.svg" />
+            </div>
+            <div>
+              <h3>Bring Shiro anywhere</h3>
+              <span>
+                Keep track of your progress on-the-go with one of many Shiro
+                apps across Windows, Android, IOS and macOS.
+              </span>
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="icon">
+              <img alt="chat" src="main-page-photos/social-icon.svg" />
+            </div>
+            <div>
+              <h3>Join the conversation</h3>
+              <span>
+                Share your thoughts with our thriving community, make friends,
+                socialize, and receive recommendations.
+              </span>
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="icon">
+              <img alt="style" src="main-page-photos/custom-icon.svg" />
+            </div>
+            <div>
+              <h3>Tweak it to your liking</h3>
+              <span>
+                Customize your scoring system, title format, color scheme, and
+                much more! Also, we have a dark mode.
+              </span>
+            </div>
+          </div>
+        </div>
+        <a class="join-btn">
+          <div class="label">Join Now</div>
+          <div class="circle">
+            <svg
+              data-v-3428d21c=""
+              aria-hidden="true"
+              focusable="false"
+              data-prefix="fas"
+              data-icon="chevron-right"
+              role="img"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 320 512"
+              class="svg-inline--fa fa-chevron-right fa-w-10"
+            >
+              <path
+                data-v-3428d21c=""
+                fill="currentColor"
+                d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                class=""
+              ></path>
+            </svg>
+          </div>
+        </a>
+      </div>
+      <div class="search" id="search-section">
+        <div class="container">
+          <div class="filters-wrap primary-filters">
+            <div class="filters">
+              <div
+                id="search-filter"
+                class="filter filter-select search-filter"
+              >
+                <div class="name">Search</div>
+                <div class="search-wrap">
+                  <svg
+                    data-v-84c4e64c=""
+                    aria-hidden="true"
+                    focusable="false"
+                    data-prefix="fas"
+                    data-icon="search"
+                    role="img"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"
+                    class="icon left svg-inline--fa fa-search fa-w-16"
+                  >
+                    <path
+                      data-v-84c4e64c=""
+                      fill="currentColor"
+                      d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"
+                      class=""
+                    ></path>
+                  </svg>
+                  <input type="search" class="search-input" />
+                </div>
+              </div>
+              <div class="filter filter-select second-filter">
+                <div class="name">Genres</div>
+                <div class="select">
+                  <div class="value-wrap">
+                    <div class="placeholder">Any</div>
+                    <input type="search" class="filter-input" />
+                  </div>
+                  <svg
+                    data-v-e3e1e202=""
+                    aria-hidden="true"
+                    focusable="false"
+                    data-prefix="fas"
+                    data-icon="chevron-down"
+                    role="img"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 448 512"
+                    class="icon svg-inline--fa fa-chevron-down fa-w-14 fa-fw"
+                  >
+                    <path
+                      data-v-e3e1e202=""
+                      fill="currentColor"
+                      d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+                      class=""
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="filter filter-select second-filter">
+                <div class="name">Year</div>
+                <div class="select">
+                  <div class="value-wrap">
+                    <div class="placeholder">Any</div>
+                    <input type="search" class="filter-input" />
+                  </div>
+                  <svg
+                    data-v-e3e1e202=""
+                    aria-hidden="true"
+                    focusable="false"
+                    data-prefix="fas"
+                    data-icon="chevron-down"
+                    role="img"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 448 512"
+                    class="icon svg-inline--fa fa-chevron-down fa-w-14 fa-fw"
+                  >
+                    <path
+                      data-v-e3e1e202=""
+                      fill="currentColor"
+                      d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+                      class=""
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="filter filter-select second-filter">
+                <div class="name">Season</div>
+                <div class="select">
+                  <div class="value-wrap">
+                    <div class="placeholder">Any</div>
+                    <input type="search" class="filter-input" />
+                  </div>
+                  <svg
+                    data-v-e3e1e202=""
+                    aria-hidden="true"
+                    focusable="false"
+                    data-prefix="fas"
+                    data-icon="chevron-down"
+                    role="img"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 448 512"
+                    class="icon svg-inline--fa fa-chevron-down fa-w-14 fa-fw"
+                  >
+                    <path
+                      data-v-e3e1e202=""
+                      fill="currentColor"
+                      d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+                      class=""
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="filter filter-select second-filter">
+                <div class="name">Format</div>
+                <div class="select">
+                  <div class="value-wrap">
+                    <div class="placeholder">Any</div>
+                    <input type="search" class="filter-input" />
+                  </div>
+                  <svg
+                    data-v-e3e1e202=""
+                    aria-hidden="true"
+                    focusable="false"
+                    data-prefix="fas"
+                    data-icon="chevron-down"
+                    role="img"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 448 512"
+                    class="icon svg-inline--fa fa-chevron-down fa-w-14 fa-fw"
+                  >
+                    <path
+                      data-v-e3e1e202=""
+                      fill="currentColor"
+                      d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+                      class=""
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="extra-filters-wrap">
+              <div class="open-btn">
+                <svg
+                  data-v-acf5fe42=""
+                  aria-hidden="true"
+                  focusable="false"
+                  data-prefix="fas"
+                  data-icon="sliders-h"
+                  role="img"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                  class="icon svg-inline--fa fa-sliders-h fa-w-16"
+                >
+                  <path
+                    data-v-acf5fe42=""
+                    fill="currentColor"
+                    d="M496 384H160v-16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v16H16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h80v16c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16v-16h336c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zm0-160h-80v-16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v16H16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h336v16c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16v-16h80c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zm0-160H288V48c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v16H16C7.2 64 0 71.2 0 80v32c0 8.8 7.2 16 16 16h208v16c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16v-16h208c8.8 0 16-7.2 16-16V80c0-8.8-7.2-16-16-16z"
+                    class=""
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div></div>
+          <div class="search-landing">
+            <div class="trending">
+              <a class="title all-link">
+                <h3>Trending now</h3>
+                <div class="expand">View All</div>
+              </a>
+              <div class="result">
+                <div>
+                  <a href="" class="cover">
+                    <img
+                      alt="Demon Slayer: Kimetsu no Yaiba"
+                      src="main-page-photos/demonslayer-01.png"
+                    />
+                  </a>
+                  <a href="" class="anime-title title">
+                    Demon Slayer: Kimetsu no Yaiba
+                  </a>
+                </div>
+                <div>
+                  <a href="" class="cover">
+                    <img
+                      class=""
+                      alt="Hell's Paradise"
+                      src="main-page-photos/hells-paradise-01.jpg"
+                    />
+                  </a>
+                  <a href="" class="anime-title title"> Hell's Paradise </a>
+                </div>
+                <div>
+                  <a href="" class="cover">
+                    <img
+                      alt="One Piece"
+                      src="main-page-photos/one-piece-01.jpg"
+                    />
+                  </a>
+                  <a href="" class="anime-title title"> One Piece </a>
+                </div>
+                <div>
+                  <a href="" class="cover">
+                    <img
+                      alt="Tengoku Daimakyo"
+                      src="main-page-photos/Tengoku-Daimakyo-01.jpg"
+                    />
+                  </a>
+                  <a href="" class="anime-title title"> Tengoku Daimakyo </a>
+                </div>
+                <div>
+                  <a href="" class="cover">
+                    <img
+                      alt="My Home Hero"
+                      src="main-page-photos/My-Home-Hero-01.png"
+                    />
+                  </a>
+                  <a href="" class="anime-title title"> My Home Hero </a>
+                </div>
+              </div>
+            </div>
+            <div class="popular">
+              <a class="title all-link">
+                <h3>Trending now</h3>
+                <div class="expand">View All</div>
+              </a>
+              <div class="result">
+                <div>
+                  <a href="" class="cover">
+                    <img
+                      alt="Dead Mount Death Play"
+                      src="main-page-photos/Dead-Mount-Death-Play-01.jpg"
+                    />
+                  </a>
+                  <a href="" class="anime-title title">
+                    Dead Mount Death Play
+                  </a>
+                </div>
+                <div>
+                  <a href="" class="cover">
+                    <img
+                      alt="Dr. STONE New World"
+                      src="main-page-photos/Dr. STONE-New-World-01.jpg"
+                    />
+                  </a>
+                  <a href="" class="anime-title title"> Dr. STONE New World </a>
+                </div>
+                <div>
+                  <a href="" class="cover">
+                    <img
+                      alt="Oshi No Ko"
+                      src="main-page-photos/Oshi-No-Ko-01.png"
+                    />
+                  </a>
+                  <a href="" class="anime-title title"> Oshi No Ko </a>
+                </div>
+                <div>
+                  <a href="" class="cover">
+                    <img
+                      alt="MASHLE: MAGIC AND MUSCLES"
+                      src="main-page-photos/MASHLE-MAGIC-AND-MUSCLES-01.png"
+                    />
+                  </a>
+                  <a href="" class="anime-title title">
+                    MASHLE: MAGIC AND MUSCLES
+                  </a>
+                </div>
+                <div>
+                  <a href="" class="cover">
+                    <img
+                      alt="Vinland Saga Season 2"
+                      src="main-page-photos/Vinland-Saga-Season-2-01.jpg"
+                    />
+                  </a>
+                  <a href="" class="anime-title title">
+                    Vinland Saga Season 2
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="Top-anime">
+              <a class="title all-link">
+                <h3>Top 100 Anime</h3>
+                <div class="expand">View All</div>
+              </a>
+              <div class="result table">
+                <div class="media-card has-rank">
+                  <div class="rank circle">
+                    <span>#</span>
+                    1
+                  </div>
+                  <a class="top-cover"><img class="image loaded" src="" /></a>
+                  <div class="content">
+                    <div class="row">
+                      <div class="title-wrap">
+                        <a class="title-link ellipsis"></a>
+                      </div>
+                      <div class="genres"></div>
+                    </div>
+                    <div class="row score">
+                      <svg
+                        data-v-70df6e62=""
+                        aria-hidden="true"
+                        focusable="false"
+                        data-prefix="far"
+                        data-icon="smile"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 496 512"
+                        color="rgb(var(--color-green))"
+                        class="icon svg-inline--fa fa-smile fa-w-16 fa-fw"
+                      >
+                        <path
+                          data-v-70df6e62=""
+                          fill="currentColor"
+                          d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 448c-110.3 0-200-89.7-200-200S137.7 56 248 56s200 89.7 200 200-89.7 200-200 200zm-80-216c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm160 0c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm4 72.6c-20.8 25-51.5 39.4-84 39.4s-63.2-14.3-84-39.4c-8.5-10.2-23.7-11.5-33.8-3.1-10.2 8.5-11.5 23.6-3.1 33.8 30 36 74.1 56.6 120.9 56.6s90.9-20.6 120.9-56.6c8.5-10.2 7.1-25.3-3.1-33.8-10.1-8.4-25.3-7.1-33.8 3.1z"
+                          class=""
+                        ></path>
+                      </svg>
+                      <div class="percentage">
+                        <span class="percentage-score"></span>
+                        <div class="sup-row popularity"></div>
+                      </div>
+                    </div>
+                    <div class="row format">
+                      <span class="format-type"></span>
+                      <div class="sup-row length"></div>
+                    </div>
+                    <div class="row date">
+                      <span class="release-date"></span>
+                      <div class="sup-row status"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="media-card has-rank">
+                  <div class="rank circle">
+                    <span>#</span>
+                    2
+                  </div>
+                  <a class="top-cover"
+                    ><img
+                      class="image loaded"
+                      src="main-page-photos/top-100/Gintama-THE-VERY-FINAL.jpg"
+                  /></a>
+                  <div class="content">
+                    <div class="row">
+                      <div class="title-wrap">
+                        <a class="title-link ellipsis"></a>
+                      </div>
+                      <div class="genres"></div>
+                    </div>
+                    <div class="row score">
+                      <svg
+                        data-v-70df6e62=""
+                        aria-hidden="true"
+                        focusable="false"
+                        data-prefix="far"
+                        data-icon="smile"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 496 512"
+                        color="rgb(var(--color-green))"
+                        class="icon svg-inline--fa fa-smile fa-w-16 fa-fw"
+                      >
+                        <path
+                          data-v-70df6e62=""
+                          fill="currentColor"
+                          d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 448c-110.3 0-200-89.7-200-200S137.7 56 248 56s200 89.7 200 200-89.7 200-200 200zm-80-216c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm160 0c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm4 72.6c-20.8 25-51.5 39.4-84 39.4s-63.2-14.3-84-39.4c-8.5-10.2-23.7-11.5-33.8-3.1-10.2 8.5-11.5 23.6-3.1 33.8 30 36 74.1 56.6 120.9 56.6s90.9-20.6 120.9-56.6c8.5-10.2 7.1-25.3-3.1-33.8-10.1-8.4-25.3-7.1-33.8 3.1z"
+                          class=""
+                        ></path>
+                      </svg>
+                      <div class="percentage">
+                        <span class="percentage-score"></span>
+                        <div class="sup-row popularity"></div>
+                      </div>
+                    </div>
+                    <div class="row format">
+                      <span class="format-type"></span>
+                      <div class="sup-row length"></div>
+                    </div>
+                    <div class="row date">
+                      <span class="release-date"></span>
+                      <div class="sup-row status"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="media-card has-rank">
+                  <div class="rank circle">
+                    <span>#</span>
+                    3
+                  </div>
+                  <a class="top-cover"
+                    ><img
+                      class="image loaded"
+                      src="main-page-photos/top-100/Gintama-THE-VERY-FINAL.jpg"
+                  /></a>
+                  <div class="content">
+                    <div class="row">
+                      <div class="title-wrap">
+                        <a class="title-link ellipsis"></a>
+                      </div>
+                      <div class="genres"></div>
+                    </div>
+                    <div class="row score">
+                      <svg
+                        data-v-70df6e62=""
+                        aria-hidden="true"
+                        focusable="false"
+                        data-prefix="far"
+                        data-icon="smile"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 496 512"
+                        color="rgb(var(--color-green))"
+                        class="icon svg-inline--fa fa-smile fa-w-16 fa-fw"
+                      >
+                        <path
+                          data-v-70df6e62=""
+                          fill="currentColor"
+                          d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 448c-110.3 0-200-89.7-200-200S137.7 56 248 56s200 89.7 200 200-89.7 200-200 200zm-80-216c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm160 0c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm4 72.6c-20.8 25-51.5 39.4-84 39.4s-63.2-14.3-84-39.4c-8.5-10.2-23.7-11.5-33.8-3.1-10.2 8.5-11.5 23.6-3.1 33.8 30 36 74.1 56.6 120.9 56.6s90.9-20.6 120.9-56.6c8.5-10.2 7.1-25.3-3.1-33.8-10.1-8.4-25.3-7.1-33.8 3.1z"
+                          class=""
+                        ></path>
+                      </svg>
+                      <div class="percentage">
+                        <span class="percentage-score"></span>
+                        <div class="sup-row popularity"></div>
+                      </div>
+                    </div>
+                    <div class="row format">
+                      <span class="format-type"></span>
+                      <div class="sup-row length"></div>
+                    </div>
+                    <div class="row date">
+                      <span class="release-date"></span>
+                      <div class="sup-row status"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="media-card has-rank">
+                  <div class="rank circle">
+                    <span>#</span>
+                    4
+                  </div>
+                  <a class="top-cover"
+                    ><img
+                      class="image loaded"
+                      src="main-page-photos/top-100/Gintama-THE-VERY-FINAL.jpg"
+                  /></a>
+                  <div class="content">
+                    <div class="row">
+                      <div class="title-wrap">
+                        <a class="title-link ellipsis"></a>
+                      </div>
+                      <div class="genres"></div>
+                    </div>
+                    <div class="row score">
+                      <svg
+                        data-v-70df6e62=""
+                        aria-hidden="true"
+                        focusable="false"
+                        data-prefix="far"
+                        data-icon="smile"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 496 512"
+                        color="rgb(var(--color-green))"
+                        class="icon svg-inline--fa fa-smile fa-w-16 fa-fw"
+                      >
+                        <path
+                          data-v-70df6e62=""
+                          fill="currentColor"
+                          d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 448c-110.3 0-200-89.7-200-200S137.7 56 248 56s200 89.7 200 200-89.7 200-200 200zm-80-216c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm160 0c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm4 72.6c-20.8 25-51.5 39.4-84 39.4s-63.2-14.3-84-39.4c-8.5-10.2-23.7-11.5-33.8-3.1-10.2 8.5-11.5 23.6-3.1 33.8 30 36 74.1 56.6 120.9 56.6s90.9-20.6 120.9-56.6c8.5-10.2 7.1-25.3-3.1-33.8-10.1-8.4-25.3-7.1-33.8 3.1z"
+                          class=""
+                        ></path>
+                      </svg>
+                      <div class="percentage">
+                        <span class="percentage-score"></span>
+                        <div class="sup-row popularity"></div>
+                      </div>
+                    </div>
+                    <div class="row format">
+                      <span class="format-type"></span>
+                      <div class="sup-row length"></div>
+                    </div>
+                    <div class="row date">
+                      <span class="release-date"></span>
+                      <div class="sup-row status"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="media-card has-rank">
+                  <div class="rank circle">
+                    <span>#</span>
+                    5
+                  </div>
+                  <a class="top-cover"
+                    ><img
+                      class="image loaded"
+                      src="main-page-photos/top-100/Gintama-THE-VERY-FINAL.jpg"
+                  /></a>
+                  <div class="content">
+                    <div class="row">
+                      <div class="title-wrap">
+                        <a class="title-link ellipsis"></a>
+                      </div>
+                      <div class="genres"></div>
+                    </div>
+                    <div class="row score">
+                      <svg
+                        data-v-70df6e62=""
+                        aria-hidden="true"
+                        focusable="false"
+                        data-prefix="far"
+                        data-icon="smile"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 496 512"
+                        color="rgb(var(--color-green))"
+                        class="icon svg-inline--fa fa-smile fa-w-16 fa-fw"
+                      >
+                        <path
+                          data-v-70df6e62=""
+                          fill="currentColor"
+                          d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 448c-110.3 0-200-89.7-200-200S137.7 56 248 56s200 89.7 200 200-89.7 200-200 200zm-80-216c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm160 0c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm4 72.6c-20.8 25-51.5 39.4-84 39.4s-63.2-14.3-84-39.4c-8.5-10.2-23.7-11.5-33.8-3.1-10.2 8.5-11.5 23.6-3.1 33.8 30 36 74.1 56.6 120.9 56.6s90.9-20.6 120.9-56.6c8.5-10.2 7.1-25.3-3.1-33.8-10.1-8.4-25.3-7.1-33.8 3.1z"
+                          class=""
+                        ></path>
+                      </svg>
+                      <div class="percentage">
+                        <span class="percentage-score"></span>
+                        <div class="sup-row popularity"></div>
+                      </div>
+                    </div>
+                    <div class="row format">
+                      <span class="format-type"></span>
+                      <div class="sup-row length"></div>
+                    </div>
+                    <div class="row date">
+                      <span class="release-date"></span>
+                      <div class="sup-row status"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="media-card has-rank">
+                  <div class="rank circle">
+                    <span>#</span>
+                    6
+                  </div>
+                  <a class="top-cover"
+                    ><img
+                      class="image loaded"
+                      src="main-page-photos/top-100/Gintama-THE-VERY-FINAL.jpg"
+                  /></a>
+                  <div class="content">
+                    <div class="row">
+                      <div class="title-wrap">
+                        <a class="title-link ellipsis"></a>
+                      </div>
+                      <div class="genres"></div>
+                    </div>
+                    <div class="row score">
+                      <svg
+                        data-v-70df6e62=""
+                        aria-hidden="true"
+                        focusable="false"
+                        data-prefix="far"
+                        data-icon="smile"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 496 512"
+                        color="rgb(var(--color-green))"
+                        class="icon svg-inline--fa fa-smile fa-w-16 fa-fw"
+                      >
+                        <path
+                          data-v-70df6e62=""
+                          fill="currentColor"
+                          d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 448c-110.3 0-200-89.7-200-200S137.7 56 248 56s200 89.7 200 200-89.7 200-200 200zm-80-216c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm160 0c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm4 72.6c-20.8 25-51.5 39.4-84 39.4s-63.2-14.3-84-39.4c-8.5-10.2-23.7-11.5-33.8-3.1-10.2 8.5-11.5 23.6-3.1 33.8 30 36 74.1 56.6 120.9 56.6s90.9-20.6 120.9-56.6c8.5-10.2 7.1-25.3-3.1-33.8-10.1-8.4-25.3-7.1-33.8 3.1z"
+                          class=""
+                        ></path>
+                      </svg>
+                      <div class="percentage">
+                        <span class="percentage-score"></span>
+                        <div class="sup-row popularity"></div>
+                      </div>
+                    </div>
+                    <div class="row format">
+                      <span class="format-type"></span>
+                      <div class="sup-row length"></div>
+                    </div>
+                    <div class="row date">
+                      <span class="release-date"></span>
+                      <div class="sup-row status"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="media-card has-rank">
+                  <div class="rank circle">
+                    <span>#</span>
+                    7
+                  </div>
+                  <a class="top-cover"
+                    ><img
+                      class="image loaded"
+                      src="main-page-photos/top-100/Gintama-THE-VERY-FINAL.jpg"
+                  /></a>
+                  <div class="content">
+                    <div class="row">
+                      <div class="title-wrap">
+                        <a class="title-link ellipsis"></a>
+                      </div>
+                      <div class="genres"></div>
+                    </div>
+                    <div class="row score">
+                      <svg
+                        data-v-70df6e62=""
+                        aria-hidden="true"
+                        focusable="false"
+                        data-prefix="far"
+                        data-icon="smile"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 496 512"
+                        color="rgb(var(--color-green))"
+                        class="icon svg-inline--fa fa-smile fa-w-16 fa-fw"
+                      >
+                        <path
+                          data-v-70df6e62=""
+                          fill="currentColor"
+                          d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 448c-110.3 0-200-89.7-200-200S137.7 56 248 56s200 89.7 200 200-89.7 200-200 200zm-80-216c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm160 0c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm4 72.6c-20.8 25-51.5 39.4-84 39.4s-63.2-14.3-84-39.4c-8.5-10.2-23.7-11.5-33.8-3.1-10.2 8.5-11.5 23.6-3.1 33.8 30 36 74.1 56.6 120.9 56.6s90.9-20.6 120.9-56.6c8.5-10.2 7.1-25.3-3.1-33.8-10.1-8.4-25.3-7.1-33.8 3.1z"
+                          class=""
+                        ></path>
+                      </svg>
+                      <div class="percentage">
+                        <span class="percentage-score"></span>
+                        <div class="sup-row popularity"></div>
+                      </div>
+                    </div>
+                    <div class="row format">
+                      <span class="format-type"></span>
+                      <div class="sup-row length"></div>
+                    </div>
+                    <div class="row date">
+                      <span class="release-date"></span>
+                      <div class="sup-row status"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="media-card has-rank">
+                  <div class="rank circle">
+                    <span>#</span>
+                    8
+                  </div>
+                  <a class="top-cover"
+                    ><img
+                      class="image loaded"
+                      src="main-page-photos/top-100/Gintama-THE-VERY-FINAL.jpg"
+                  /></a>
+                  <div class="content">
+                    <div class="row">
+                      <div class="title-wrap">
+                        <a class="title-link ellipsis"></a>
+                      </div>
+                      <div class="genres"></div>
+                    </div>
+                    <div class="row score">
+                      <svg
+                        data-v-70df6e62=""
+                        aria-hidden="true"
+                        focusable="false"
+                        data-prefix="far"
+                        data-icon="smile"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 496 512"
+                        color="rgb(var(--color-green))"
+                        class="icon svg-inline--fa fa-smile fa-w-16 fa-fw"
+                      >
+                        <path
+                          data-v-70df6e62=""
+                          fill="currentColor"
+                          d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 448c-110.3 0-200-89.7-200-200S137.7 56 248 56s200 89.7 200 200-89.7 200-200 200zm-80-216c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm160 0c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm4 72.6c-20.8 25-51.5 39.4-84 39.4s-63.2-14.3-84-39.4c-8.5-10.2-23.7-11.5-33.8-3.1-10.2 8.5-11.5 23.6-3.1 33.8 30 36 74.1 56.6 120.9 56.6s90.9-20.6 120.9-56.6c8.5-10.2 7.1-25.3-3.1-33.8-10.1-8.4-25.3-7.1-33.8 3.1z"
+                          class=""
+                        ></path>
+                      </svg>
+                      <div class="percentage">
+                        <span class="percentage-score"></span>
+                        <div class="sup-row popularity"></div>
+                      </div>
+                    </div>
+                    <div class="row format">
+                      <span class="format-type"></span>
+                      <div class="sup-row length"></div>
+                    </div>
+                    <div class="row date">
+                      <span class="release-date"></span>
+                      <div class="sup-row status"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="media-card has-rank">
+                  <div class="rank circle">
+                    <span>#</span>
+                    9
+                  </div>
+                  <a class="top-cover"
+                    ><img
+                      class="image loaded"
+                      src="main-page-photos/top-100/Gintama-THE-VERY-FINAL.jpg"
+                  /></a>
+                  <div class="content">
+                    <div class="row">
+                      <div class="title-wrap">
+                        <a class="title-link ellipsis"></a>
+                      </div>
+                      <div class="genres"></div>
+                    </div>
+                    <div class="row score">
+                      <svg
+                        data-v-70df6e62=""
+                        aria-hidden="true"
+                        focusable="false"
+                        data-prefix="far"
+                        data-icon="smile"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 496 512"
+                        color="rgb(var(--color-green))"
+                        class="icon svg-inline--fa fa-smile fa-w-16 fa-fw"
+                      >
+                        <path
+                          data-v-70df6e62=""
+                          fill="currentColor"
+                          d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 448c-110.3 0-200-89.7-200-200S137.7 56 248 56s200 89.7 200 200-89.7 200-200 200zm-80-216c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm160 0c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm4 72.6c-20.8 25-51.5 39.4-84 39.4s-63.2-14.3-84-39.4c-8.5-10.2-23.7-11.5-33.8-3.1-10.2 8.5-11.5 23.6-3.1 33.8 30 36 74.1 56.6 120.9 56.6s90.9-20.6 120.9-56.6c8.5-10.2 7.1-25.3-3.1-33.8-10.1-8.4-25.3-7.1-33.8 3.1z"
+                          class=""
+                        ></path>
+                      </svg>
+                      <div class="percentage">
+                        <span class="percentage-score"></span>
+                        <div class="sup-row popularity"></div>
+                      </div>
+                    </div>
+                    <div class="row format">
+                      <span class="format-type"></span>
+                      <div class="sup-row length"></div>
+                    </div>
+                    <div class="row date">
+                      <span class="release-date"></span>
+                      <div class="sup-row status"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="media-card has-rank">
+                  <div class="rank circle">
+                    <span>#</span>
+                    10
+                  </div>
+                  <a class="top-cover"
+                    ><img
+                      class="image loaded"
+                      src="main-page-photos/top-100/Gintama-THE-VERY-FINAL.jpg"
+                  /></a>
+                  <div class="content">
+                    <div class="row">
+                      <div class="title-wrap">
+                        <a class="title-link ellipsis"></a>
+                      </div>
+                      <div class="genres"></div>
+                    </div>
+                    <div class="row score">
+                      <svg
+                        data-v-70df6e62=""
+                        aria-hidden="true"
+                        focusable="false"
+                        data-prefix="far"
+                        data-icon="smile"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 496 512"
+                        color="rgb(var(--color-green))"
+                        class="icon svg-inline--fa fa-smile fa-w-16 fa-fw"
+                      >
+                        <path
+                          data-v-70df6e62=""
+                          fill="currentColor"
+                          d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 448c-110.3 0-200-89.7-200-200S137.7 56 248 56s200 89.7 200 200-89.7 200-200 200zm-80-216c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm160 0c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32zm4 72.6c-20.8 25-51.5 39.4-84 39.4s-63.2-14.3-84-39.4c-8.5-10.2-23.7-11.5-33.8-3.1-10.2 8.5-11.5 23.6-3.1 33.8 30 36 74.1 56.6 120.9 56.6s90.9-20.6 120.9-56.6c8.5-10.2 7.1-25.3-3.1-33.8-10.1-8.4-25.3-7.1-33.8 3.1z"
+                          class=""
+                        ></path>
+                      </svg>
+                      <div class="percentage">
+                        <span class="percentage-score"></span>
+                        <div class="sup-row popularity"></div>
+                      </div>
+                    </div>
+                    <div class="row format">
+                      <span class="format-type"></span>
+                      <div class="sup-row length"></div>
+                    </div>
+                    <div class="row date">
+                      <span class="release-date"></span>
+                      <div class="sup-row status"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <footer class="bottom-footer">
-            <div class="button-wrap">
-                <button class="theme-button">Site Theme</button>
-            </div>
+          <div class="button-wrap">
+            <button class="theme-button">Site Theme</button>
+          </div>
         </footer>
-    </body>
+    </main>
+  </body>
 </html>

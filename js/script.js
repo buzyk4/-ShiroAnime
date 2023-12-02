@@ -57,6 +57,34 @@ exitBtn.addEventListener("click", () => {
 
 /* Mechanisms for searching filters */
 
+document.querySelector("#form-open");
+const formContainer = document.querySelector(".form-container");
+const signupNowBtn = document.querySelector("#signup");
+const loginNowBtn = document.querySelector("#login");
+const pwShowHide = document.querySelectorAll(".pw-hide");
+
+pwShowHide.forEach((icon) => {
+  icon.addEventListener("click", () => {
+    let getPwInput = icon.parentElement.querySelector("input");
+    if (getPwInput.type === "password") {
+      getPwInput.type = "text";
+      icon.classList.replace("uil-eye-slash", "uil-eye");
+    } else {
+      getPwInput.type = "password"; // Fix the variable name here
+      icon.classList.replace("uil-eye", "uil-eye-slash");
+    }
+  });
+});
+
+signupNowBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  formContainer.classList.add("active");
+});
+loginNowBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  formContainer.classList.remove("active");
+});
+
 const inputList = document.querySelectorAll(".filter-input");
 
 inputList.forEach((input) => {
