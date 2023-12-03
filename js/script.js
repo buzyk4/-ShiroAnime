@@ -17,7 +17,7 @@ window.addEventListener("scroll", () => {
 const logLanding = document.getElementById("log-container");
 const logCard = document.getElementById("log-card");
 const logBtn = document.querySelector(".login");
-const signUpBtn = document.querySelector(".signUp");
+const signUpBtn = document.querySelectorAll(".go-signup");
 const exitBtn = document.querySelector(".exit");
 
 function switchVisible() {
@@ -39,10 +39,16 @@ logBtn.addEventListener("click", () => {
     : undefined;
 });
 
-signUpBtn.addEventListener("click", () => {
-  (logLanding.classList = ".log-container-invisb")
-    ? switchVisible()
-    : undefined;
+signUpBtn.forEach((signUpBtn) => {
+  signUpBtn.addEventListener("click", () => {
+    const logLanding = document.querySelector(".log-container-invisb");
+
+    logLanding.classList.toggle("log-container-invisb");
+
+    if (!logLanding.classList.contains("log-container-invisb")) {
+      switchVisible();
+    }
+  });
 });
 
 exitBtn.addEventListener("click", () => {
@@ -59,8 +65,6 @@ exitBtn.addEventListener("click", () => {
 
 document.querySelector("#form-open");
 const formContainer = document.querySelector(".form-container");
-const signupNowBtn = document.querySelector("#signup");
-const loginNowBtn = document.querySelector("#login");
 const pwShowHide = document.querySelectorAll(".pw-hide");
 
 pwShowHide.forEach((icon) => {
@@ -74,15 +78,6 @@ pwShowHide.forEach((icon) => {
       icon.classList.replace("uil-eye", "uil-eye-slash");
     }
   });
-});
-
-signupNowBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  formContainer.classList.add("active");
-});
-loginNowBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  formContainer.classList.remove("active");
 });
 
 const inputList = document.querySelectorAll(".filter-input");
