@@ -294,15 +294,7 @@ a {
 
 .log-container-invisb {
   z-index: -1;
-  position: fixed;
-  width: 100%;
-  height: 110%;
-  margin: -65px 0 0 0;
-  background: rgba(46, 43, 43, 0.075);
-  backdrop-filter: blur(4.9px);
-  -webkit-backdrop-filter: blur(4.9px);
-  display: grid;
-  place-items: center;
+  position: absolute;
 }
 
 .log-card-invisb {

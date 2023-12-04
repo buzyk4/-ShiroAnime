@@ -105,3 +105,36 @@ link > .signUp {
 .Top-anime {
   margin-top: 5rem;
 }
+
+.media-card {
+  height: 260px;
+  margin-left: 0px;
+}
+
+.rank {
+  display: none;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  height: 260px;
+}
+
+.row {
+  text-align: center;
+}
+
+.genres {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  height: fit-content;
+  gap: 4px;
+  overflow: visible;
+  margin-left: -2px;
+}
+
+.ellipsis {
+  white-space: wrap;
+}
