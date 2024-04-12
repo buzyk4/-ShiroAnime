@@ -280,14 +280,24 @@ a {
   font-size: 0.9rem;
   font-weight: 800;
   padding: 10px 15px;
-  min-width: 40px;
+  max-width: 92px;
 }
 
 .signUp:hover {
   box-shadow: 0 2px 10px #3577ff;
   transform: scale(1.02);
 }
-
+.profile {
+  width: min-content;
+  margin-left: 20px;
+}
+.profile img {
+  height: 3rem;
+  width: 3rem;
+  min-height: 22px;
+  min-width: 22px;
+  border-radius: 50%;
+}
 /*
     Login/Sing Up
 */
