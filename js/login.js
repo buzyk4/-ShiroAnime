@@ -1,28 +1,28 @@
 // email: sample@gmail.com
 // password: 1111
 
-let usersLogs = [
-  {
-    nickname: "Test",
-    email: "sample@gmail.com",
-    password: "1111",
-  },
+const accounts = [
+  { login: "user1", email: "sample@gmail.com", password: "1111" },
 ];
 
-//Email check
-const email = document.querySelector(".email-req");
-const emailValue = email.value;
-
 //Password check
-const password = document.querySelector(".password-req");
-const passwordValue = password.value;
+function checkLogin() {
+  const loginInput = document.getElementById("email").value;
+  const passwordInput = document.getElementById("password").value;
 
-const LoginBtn = document.getElementById("loginBtnHelp");
+  // Verify accound data
+  const foundAccount = accounts.find((account) => {
+    console.log("login:", loginInput, "password:", passwordInput);
+    return (
+      (account.login === loginInput || account.email === loginInput) &&
+      account.password === passwordInput
+    );
+  });
 
-LoginBtn.addEventListener("click", function (email) {
-  // Find the user in the database
-  let user = usersLogs.find((user) => user === email);
-  console.log(user);
-  // Return the user
-  return user;
-});
+  if (foundAccount) {
+    alert("Zalogowano pomyślnie!");
+    // Wrong accounf data
+  } else {
+    alert("Błąd logowania. Sprawdź login lub hasło.");
+  }
+}
